@@ -1,0 +1,6 @@
+C:\Users\hieuht\Desktop\Temp\MVC\hCMS\CMSHelperLib\bin\Debug\CMSHelperLib.dll
+C:\Users\hieuht\Desktop\Temp\MVC\hCMS\CMSHelperLib\bin\Debug\CMSHelperLib.pdb
+C:\Users\hieuht\Desktop\Temp\MVC\hCMS\CMSHelperLib\obj\Debug\CMSHelperLib.csproj.CoreCompileInputs.cache
+C:\Users\hieuht\Desktop\Temp\MVC\hCMS\CMSHelperLib\obj\Debug\CMSHelperLib.dll
+C:\Users\hieuht\Desktop\Temp\MVC\hCMS\CMSHelperLib\obj\Debug\CMSHelperLib.pdb
+C:\Users\hieuht\Desktop\Temp\MVC\hCMS\CMSHelperLib\obj\Debug\CMSHelperLib.csprojResolveAssemblyReference.cache

@@ -1,0 +1,11 @@
+D:\MVC\LibDatabase\bin\Debug\LibDatabase.dll
+D:\MVC\LibDatabase\bin\Debug\LibDatabase.pdb
+D:\MVC\LibDatabase\obj\Debug\LibDatabase.csproj.CoreCompileInputs.cache
+D:\MVC\LibDatabase\obj\Debug\LibDatabase.dll
+D:\MVC\LibDatabase\obj\Debug\LibDatabase.pdb
+C:\Users\hieuht\Desktop\Temp\MVC\LibDatabase\bin\Debug\LibDatabase.dll
+C:\Users\hieuht\Desktop\Temp\MVC\LibDatabase\bin\Debug\LibDatabase.pdb
+C:\Users\hieuht\Desktop\Temp\MVC\LibDatabase\obj\Debug\LibDatabase.csproj.CoreCompileInputs.cache
+C:\Users\hieuht\Desktop\Temp\MVC\LibDatabase\obj\Debug\LibDatabase.dll
+C:\Users\hieuht\Desktop\Temp\MVC\LibDatabase\obj\Debug\LibDatabase.pdb
+C:\Users\hieuht\Desktop\Temp\MVC\LibDatabase\obj\Debug\LibDatabase.csprojResolveAssemblyReference.cache

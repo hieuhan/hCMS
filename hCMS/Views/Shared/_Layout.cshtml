@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ICSOFT CMS</title>
+    @Styles.Render("~/bundles/Css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/Js")
+    @Scripts.Render("~/bundles/jqueryval")
+</head>
+<body>
+    <!--Begin bgwebbody-->
+    <div class="bgwebbody">
+        <div class="wightfull">
+            @{Html.RenderAction("PartialHeader", "Shared");}
+            <!--Begin menubardieuhuong-->
+            @RenderSection("menudieuhuong", required: false)
+            @*<div class="menudieuhuong">
+                    <div class="menudieuhuong_conen">
+                        <img src="/images/muitendieuhuong.png">
+                        <b>Home</b>
+                    </div>
+                </div>*@
+            <div class="clear5px"></div>
+            <!--End menubardieuhuong-->
+            <!--Begin noidungconten-->
+            <div class="khungnoidungconten">
+                <div class="khungcontenpading">
+                    @RenderBody()
+                    @*<div class="page-header">
+                            <h1>Welcome!</h1>
+                        </div>*@
+                    <div class="clear5px"></div>
+                </div>
+                <!--End noidungconten-->
+            </div>
+            <div class="clear5px"></div>
+            <div class="fooder">
+                Phát triển bởi ICSOFT.
+            </div>
+            <div class="clear5px"></div>
+        </div>
+        <!--End bgwebbody-->
+    </div>
+    <span id="loading">Đang tải dữ liệu...</span>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#selectall').click(function (event) {
+                if (this.checked) {
+                    $('.checkall').each(function () {
+                        this.checked = true;
+                    });
+                } else {
+                    $('.checkall').each(function () {
+                        this.checked = false;
+                    });
+                }
+            });
+        });
+        $(function () {
+            $(".datepicker").datepicker({ dateFormat: 'dd/mm/yy' });
+            $(".datepicker").datepicker("option", "monthNames", ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"]);
+            $(".datepicker").datepicker("option", "monthNamesShort", ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"]);
+            $(".datepicker").datepicker("option", "dayNamesMin", ["CN", "T2", "T3", "T4", "T5", "T6", "T7"]);
+        });
+    </script>
+</body>
+</html>

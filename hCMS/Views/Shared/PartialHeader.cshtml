@@ -1,0 +1,61 @@
+﻿@using CMSHelperLib
+@using hCMS.Library
+@model hCMS.Models.Shared.HeaderModel
+
+<div class="logoconten">
+    <div class="logotop">
+        <span class="tieudehethong">
+            Hệ thống quản trị nội dung
+        </span>
+    </div>
+    <div class="logotopright">
+        <div class="datetime">@DateTime.Now.ToString("dd-MM-yyyy HH:mm")</div>
+        &nbsp;&nbsp;&nbsp;
+        @if (SessionHelpers.UserId > 0)
+        {
+            <ul class="menu_admin">
+                <li>
+                    <a href="#">
+                        Xin chào
+                        @SessionHelpers.UserName				<img src="@Url.Content("~/assets/images/admin.png")" alt="admin" />
+                    </a>
+                    <ul>
+                        <li><a href="@(CmsConstants.ROOT_PATH)Users/ChangePassword" title="Đổi mật khẩu" class="html5adminadmin popup">Đổi mật khẩu</a></li>
+                        <li><a href="@(CmsConstants.ROOT_PATH)Users/Profile" title="Thông tin profile" class="html5adminadmin popup">Thông tin profile</a></li>
+                        <li><a href="@(CmsConstants.ROOT_PATH)Users/Logout" title="Đăng xuất tài khoản" class="html5adminadmin">Thoát</a></li>
+                    </ul>
+                </li>
+            </ul>
+        }
+    </div>
+</div>
+
+<div class="menu">
+    <ul id="nav">
+        @*<li class="site-name"><a href="@(CmsConstants.ROOT_PATH)Home" title="Trang chủ">&nbsp;</a></li>*@
+        @if (Model.ListActionLevel1.HasValue())
+        {
+            foreach (var actionLevel1 in Model.ListActionLevel1)
+            {
+                var list = Model.ListActionForUser.GetActionsListByParentId(actionLevel1.ActionId);
+                <li class="menudown">
+                    <a href="@actionLevel1.Url" title="@actionLevel1.ActionDesc">@actionLevel1.ActionDesc</a>
+                    @if (list.HasValue())
+                    {
+                        <ul>
+                            @foreach (var item in list)
+                            {
+                                <li><a href="@(CmsConstants.ROOT_PATH)@item.Url">@item.ActionDesc</a></li>
+                            }
+                        </ul>
+                    }
+                </li>
+            }
+        }
+        @if (SessionHelpers.UserId <= 0)
+        {
+            <li class="menudown"><a href="@(CmsConstants.ROOT_PATH)Users/Login" title="Đăng nhập">&nbsp;Đăng nhập</a></li>
+        }
+    </ul>
+</div>
+

@@ -1,0 +1,48 @@
+﻿@using hCMS.Library
+@model hCMS.Models.Users.UserEditModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ICSOFT CMS</title>
+    @Styles.Render("~/bundles/Css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+</head>
+<body>
+
+    @using (Html.BeginForm("Edit", "Users", FormMethod.Post, null))
+    {
+        @Html.ValidationSummary(false, "", new { @class = "text-danger w3-center" })
+        @Html.AntiForgeryToken()
+        <div class="w3-container" style="height: 390px; overflow: auto">
+            <label class="w3-label w3-left">Tên truy nhập:</label>
+            @Html.TextBoxFor(m => m.UserName, new { @class = "w3-input w3-border w3-round w3-padding-small" })
+            <label class="w3-label w3-left">Họ tên:</label>
+            @Html.TextBoxFor(m => m.FullName, new { @class = "w3-input w3-border w3-round w3-padding-small" })
+            <label class="w3-label w3-left">Giới tính:</label>
+            @Html.DropDownListFor(m => m.GenderId, new SelectList(Model.ListGenders, "GenderId", "GenderDesc", Model.GenderId), new { @class = "w3-input w3-border w3-padding-small" })
+            <label class="w3-label w3-left">Email:</label>
+            @Html.TextBoxFor(m => m.Email, new { @class = "w3-input w3-border w3-round w3-padding-small" })
+            <label class="w3-label w3-left">Mobile:</label>
+            @Html.TextBoxFor(m => m.Mobile, new { @class = "w3-input w3-border w3-round w3-padding-small" })
+            <label class="w3-label w3-left">Loại user:</label>
+            @Html.DropDownListFor(m => m.UserTypeId, new SelectList(Model.ListUserTypes, "UserTypeId", "UserTypeDesc", Model.UserTypeId).AddDefaultOption("...", "0"), new { @class = "w3-input w3-border w3-padding-small" })
+            <label class="w3-label w3-left">Trạng thái:</label>
+            @Html.DropDownListFor(m => m.UserStatusId, new SelectList(Model.ListUserStatus, "UserStatusId", "UserStatusDesc", Model.UserStatusId).AddDefaultOption("...", "0"), new { @class = "w3-input w3-border w3-padding-small" })
+            @Html.HiddenFor(m => m.UserId)
+        </div>
+        <div class="w3-center w3-bottom w3-padding-bottom">
+            <button class="w3-btn w3-border w3-round w3-blue" type="submit"><i class="fa fa-floppy-o"></i> <b>Lưu thông tin</b></button>
+        </div>
+    }
+
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+﻿@model hCMS.Models.Roles.RolesModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ICSOFT CMS</title>
+    @Styles.Render("~/bundles/Css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+</head>
+<body>
+@using (Html.BeginForm("Edit", "Roles", FormMethod.Post, null))
+{
+    @Html.ValidationSummary(false, "", new { @class = "text-danger w3-center" })
+    @Html.AntiForgeryToken()
+    <div class="w3-container" style="height: 350px; overflow: auto">
+        <p>
+            <label class="w3-label w3-left">Tên:</label>
+            @Html.TextBoxFor(m => m.RoleName, new { @class = "w3-input w3-border w3-round" })
+        </p>
+        <p>
+            <label class="w3-label w3-left">Mô tả:</label>
+            @Html.TextBoxFor(m => m.RoleDesc, new { @class = "w3-input w3-border w3-round" })
+        </p>
+        @Html.HiddenFor(m=>m.RoleId)
+        <div class="w3-center w3-bottom w3-padding-bottom">
+            <button class="w3-btn w3-border w3-round w3-blue" type="submit"><i class="fa fa-floppy-o"></i> <b>Lưu thông tin</b></button>
+        </div>
+    </div>
+}
+</body>
+</html>
+

@@ -1,0 +1,45 @@
+﻿@using hCMS.Library
+@model hCMS.Models.Roles.RoleActionsModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ICSOFT CMS</title>
+    @Styles.Render("~/bundles/Css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/Js")
+    @Scripts.Render("~/bundles/jqueryval")
+</head>
+<body>
+
+@using (Html.BeginForm("RoleActions", "Roles", FormMethod.Post, null))
+{
+    @Html.ValidationSummary(false, "", new { @class = "text-danger w3-center" })
+    @Html.AntiForgeryToken()
+    <div class="w3-container" style="height:320px;overflow:auto">
+        @if (Model.ListActions.HasValue())
+        {
+            foreach (var action in Model.ListActions)
+            {
+                //if (Model.ListActionsByRole.HasValue())
+                //{
+                var actionsByRole = Model.ListActionsByRole.ActionsGetByActionId(action.ActionId);
+                <input name="ActionsId" id="chkActionId_@action.ActionId" value="@action.ActionId" class="w3-check" type="checkbox" @(actionsByRole != null && actionsByRole.ActionId > 0 ? "checked" : string.Empty)>
+                <label for="chkActionId_@action.ActionId" class="w3-validate"><b>@action.ActionDesc</b></label><br>
+                //}
+            }
+        }
+        @Html.HiddenFor(m => m.RoleId)
+    </div>
+    <div class="w3-center w3-bottom w3-padding-bottom">
+        <button class="w3-btn w3-border w3-round w3-blue" type="submit"><i class="fa fa-floppy-o"></i> <b>Lưu thông tin</b></button>
+    </div>
+}
+</body>
+</html>
