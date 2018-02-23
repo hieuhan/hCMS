@@ -386,8 +386,14 @@ namespace CMSLib
                 sqlCommand.Parameters.Add("@SysMessageId", SqlDbType.SmallInt).Direction = ParameterDirection.Output;
                 sqlCommand.Parameters.Add("@SysMessageTypeId", SqlDbType.TinyInt).Direction = ParameterDirection.Output;
                 this.db.ExecuteSQL(sqlCommand);
-                sysMessageId = Convert.ToInt16(sqlCommand.Parameters["@SysMessageId"].Value == DBNull.Value ? "0" : sqlCommand.Parameters["@SysMessageId"].Value);
-                retVal = Convert.ToByte(sqlCommand.Parameters["@SysMessageTypeId"].Value == DBNull.Value ? "0" : sqlCommand.Parameters["@SysMessageTypeId"].Value);
+                if (sqlCommand.Parameters["@SysMessageId"].Value != DBNull.Value)
+                {
+                    sysMessageId = Convert.ToInt16(sqlCommand.Parameters["@SysMessageId"].Value);
+                }
+                if (sqlCommand.Parameters["@SysMessageTypeId"].Value != DBNull.Value)
+                {
+                    retVal = Convert.ToByte(sqlCommand.Parameters["@SysMessageTypeId"].Value);
+                }
             }
             catch (Exception ex)
             {
@@ -423,8 +429,14 @@ namespace CMSLib
                 sqlCommand.Parameters.Add("@SysMessageId", SqlDbType.SmallInt).Direction = ParameterDirection.Output;
                 sqlCommand.Parameters.Add("@SysMessageTypeId", SqlDbType.TinyInt).Direction = ParameterDirection.Output;
                 this.db.ExecuteSQL(sqlCommand);
-                sysMessageId = Convert.ToInt16(sqlCommand.Parameters["@SysMessageId"].Value ?? "0");
-                retVal = Convert.ToByte(sqlCommand.Parameters["@SysMessageTypeId"].Value ?? "0");
+                if (sqlCommand.Parameters["@SysMessageId"].Value != DBNull.Value)
+                {
+                    sysMessageId = Convert.ToInt16(sqlCommand.Parameters["@SysMessageId"].Value);
+                }
+                if (sqlCommand.Parameters["@SysMessageTypeId"].Value != DBNull.Value)
+                {
+                    retVal = Convert.ToByte(sqlCommand.Parameters["@SysMessageTypeId"].Value);
+                }
             }
             catch (Exception ex)
             {
@@ -444,8 +456,14 @@ namespace CMSLib
                 sqlCommand.Parameters.Add("@SysMessageId", SqlDbType.SmallInt).Direction = ParameterDirection.Output;
                 sqlCommand.Parameters.Add("@SysMessageTypeId", SqlDbType.TinyInt).Direction = ParameterDirection.Output;
                 this.db.ExecuteSQL(sqlCommand);
-                sysMessageId = Convert.ToInt16(sqlCommand.Parameters["@SysMessageId"].Value ?? "0");
-                retVal = Convert.ToByte(sqlCommand.Parameters["@SysMessageTypeId"].Value ?? "0");
+                if (sqlCommand.Parameters["@SysMessageId"].Value != DBNull.Value)
+                {
+                    sysMessageId = Convert.ToInt16(sqlCommand.Parameters["@SysMessageId"].Value);
+                }
+                if (sqlCommand.Parameters["@SysMessageTypeId"].Value != DBNull.Value)
+                {
+                    retVal = Convert.ToByte(sqlCommand.Parameters["@SysMessageTypeId"].Value);
+                }
             }
             catch (Exception ex)
             {
