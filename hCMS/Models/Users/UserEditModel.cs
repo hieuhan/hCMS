@@ -23,9 +23,15 @@ namespace hCMS.Models.Users
             "{0} không bao gồm khoảng trắng, chỉ bao gồm chữ cái thường và số.")]
         public string UserName { get; set; }
 
+        [Display(Name = "Mật khẩu")]
+        [StringLength(100, ErrorMessage = "Mật khẩu bao gồm 6 ký tự trở lên.", MinimumLength = 6)]
+        [Required(ErrorMessage = "Vui lòng nhập {0} (*)")]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
 
         public string FullName { get; set; }
+
+        public string Address { get; set; }
 
         [Required(ErrorMessage = "{0} (*)")]
         [Display(Name = "Email")]
@@ -33,7 +39,15 @@ namespace hCMS.Models.Users
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
+        [DataType(DataType.PhoneNumber)]
+        [RegularExpression("^(84|0)\\d{9,10}$", ErrorMessage = "Số điện thoại không đúng ! \n Số điện thoại hợp lệ dạng 84xxxxxxxxx hoặc 0xxxxxxxxx")]
         public string Mobile { get; set; }
+
+        public string Comment { get; set; }
+
+        public short DefaultActionId { get; set; }
+
+        public DateTime BirthDay { get; set; }
 
         public byte UserTypeId { get; set; }
 

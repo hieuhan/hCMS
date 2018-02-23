@@ -9,3 +9,9 @@ C:\Users\hieuht\Desktop\Temp\MVC\LibDatabase\obj\Debug\LibDatabase.csproj.CoreCo
 C:\Users\hieuht\Desktop\Temp\MVC\LibDatabase\obj\Debug\LibDatabase.dll
 C:\Users\hieuht\Desktop\Temp\MVC\LibDatabase\obj\Debug\LibDatabase.pdb
 C:\Users\hieuht\Desktop\Temp\MVC\LibDatabase\obj\Debug\LibDatabase.csprojResolveAssemblyReference.cache
+E:\GitHub\hCMS\LibDatabase\bin\Debug\LibDatabase.dll
+E:\GitHub\hCMS\LibDatabase\bin\Debug\LibDatabase.pdb
+E:\GitHub\hCMS\LibDatabase\obj\Debug\LibDatabase.csprojResolveAssemblyReference.cache
+E:\GitHub\hCMS\LibDatabase\obj\Debug\LibDatabase.csproj.CoreCompileInputs.cache
+E:\GitHub\hCMS\LibDatabase\obj\Debug\LibDatabase.dll
+E:\GitHub\hCMS\LibDatabase\obj\Debug\LibDatabase.pdb

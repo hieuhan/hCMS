@@ -48,6 +48,10 @@
       <Project>{F7567FD7-D14E-481D-980F-4D49582E7F8B}</Project>
       <Name>CMSLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LibDatabase\LibDatabase.csproj">
+      <Project>{86b3668d-371b-4c9e-8c59-e39c908d8730}</Project>
+      <Name>LibDatabase</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibUtils\LibUtils.csproj">
       <Project>{2EB25410-9882-443E-8FAF-467312593FDB}</Project>
       <Name>LibUtils</Name>

@@ -4,3 +4,9 @@ C:\Users\hieuht\Desktop\Temp\MVC\hCMS\CMSHelperLib\obj\Debug\CMSHelperLib.csproj
 C:\Users\hieuht\Desktop\Temp\MVC\hCMS\CMSHelperLib\obj\Debug\CMSHelperLib.dll
 C:\Users\hieuht\Desktop\Temp\MVC\hCMS\CMSHelperLib\obj\Debug\CMSHelperLib.pdb
 C:\Users\hieuht\Desktop\Temp\MVC\hCMS\CMSHelperLib\obj\Debug\CMSHelperLib.csprojResolveAssemblyReference.cache
+E:\GitHub\hCMS\CMSHelperLib\bin\Debug\CMSHelperLib.dll
+E:\GitHub\hCMS\CMSHelperLib\bin\Debug\CMSHelperLib.pdb
+E:\GitHub\hCMS\CMSHelperLib\obj\Debug\CMSHelperLib.csprojResolveAssemblyReference.cache
+E:\GitHub\hCMS\CMSHelperLib\obj\Debug\CMSHelperLib.csproj.CoreCompileInputs.cache
+E:\GitHub\hCMS\CMSHelperLib\obj\Debug\CMSHelperLib.dll
+E:\GitHub\hCMS\CMSHelperLib\obj\Debug\CMSHelperLib.pdb

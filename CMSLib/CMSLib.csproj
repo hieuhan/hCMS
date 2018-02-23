@@ -58,6 +58,10 @@
     <Compile Include="Wards.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LibDatabase\LibDatabase.csproj">
+      <Project>{86b3668d-371b-4c9e-8c59-e39c908d8730}</Project>
+      <Name>LibDatabase</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibUtils\LibUtils.csproj">
       <Project>{2EB25410-9882-443E-8FAF-467312593FDB}</Project>
       <Name>LibUtils</Name>

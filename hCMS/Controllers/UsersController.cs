@@ -138,9 +138,11 @@ namespace hCMS.Controllers
                 {
                     UserId = model.UserId,
                     UserName = model.UserName,
+                    Password = model.Password,
                     Fullname = model.FullName,
                     Email = model.Email,
                     Mobile = model.Mobile,
+                    Birthday = model.BirthDay,
                     GenderId = model.GenderId,
                     UserTypeId = model.UserTypeId,
                     UserStatusId = model.UserStatusId
