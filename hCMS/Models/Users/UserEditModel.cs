@@ -13,6 +13,7 @@ namespace hCMS.Models.Users
         private List<UserStatus> _listUserStatus;
         private List<UserTypes> _listUserTypes;
         private List<Genders> _listGenders;
+        private List<CMSLib.Actions> _listActions;
         public int UserId { get; set; }
 
         public byte GenderId { get; set; }
@@ -43,7 +44,7 @@ namespace hCMS.Models.Users
         [RegularExpression("^(84|0)\\d{9,10}$", ErrorMessage = "Số điện thoại không đúng ! \n Số điện thoại hợp lệ dạng 84xxxxxxxxx hoặc 0xxxxxxxxx")]
         public string Mobile { get; set; }
 
-        public string Comment { get; set; }
+        public string Comments { get; set; }
 
         public short DefaultActionId { get; set; }
 
@@ -69,6 +70,12 @@ namespace hCMS.Models.Users
         {
             get => !_listGenders.HasValue() ? Genders.Static_GetListAll() : _listGenders;
             set => _listGenders = value;
+        }
+
+        public List<CMSLib.Actions> ListActions
+        {
+            get => !_listActions.HasValue() ? new CMSLib.Actions().GetAllHierachy() : _listActions;
+            set => _listActions = value;
         }
     }
 }

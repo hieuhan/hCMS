@@ -293,7 +293,7 @@ namespace CMSLib
                 SqlCommand sqlCommand = new SqlCommand("Users_Insert");
                 sqlCommand.CommandType = CommandType.StoredProcedure;
                 sqlCommand.Parameters.Add(new SqlParameter("@Username", this.UserName));
-                sqlCommand.Parameters.Add(new SqlParameter("@UserPass", this.UserPass));
+                //sqlCommand.Parameters.Add(new SqlParameter("@UserPass", this.UserPass));
                 sqlCommand.Parameters.Add(new SqlParameter("@Password", this.Password));
                 sqlCommand.Parameters.Add(new SqlParameter("@Fullname", this.Fullname));
                 sqlCommand.Parameters.Add(new SqlParameter("@Address", this.Address));
@@ -303,7 +303,9 @@ namespace CMSLib
                 sqlCommand.Parameters.Add(new SqlParameter("@UserStatusId", this.UserStatusId));
                 sqlCommand.Parameters.Add(new SqlParameter("@GenderId", this.GenderId));
                 sqlCommand.Parameters.Add(new SqlParameter("@DefaultActionId", this.DefaultActionId));
-                sqlCommand.Parameters.Add(new SqlParameter("@Birthday", this.Birthday));
+                sqlCommand.Parameters.Add(Birthday == DateTime.MinValue
+                    ? new SqlParameter("@Birthday", DBNull.Value)
+                    : new SqlParameter("@Birthday", this.Birthday));
                 sqlCommand.Parameters.Add(new SqlParameter("@UserTypeId", this.UserTypeId));
                 sqlCommand.Parameters.Add(new SqlParameter("@ActUserID", actUserId));
                 sqlCommand.Parameters.Add("@UserId", SqlDbType.Int).Direction = ParameterDirection.Output;
@@ -329,7 +331,7 @@ namespace CMSLib
                 SqlCommand sqlCommand =
                     new SqlCommand("Users_InsertForDemand") { CommandType = CommandType.StoredProcedure };
                 sqlCommand.Parameters.Add(new SqlParameter("@Username", this.UserName));
-                sqlCommand.Parameters.Add(new SqlParameter("@UserPass", this.UserPass));
+                //sqlCommand.Parameters.Add(new SqlParameter("@UserPass", this.UserPass));
                 sqlCommand.Parameters.Add(new SqlParameter("@Password", this.Password));
                 sqlCommand.Parameters.Add(new SqlParameter("@Fullname", this.Fullname));
                 sqlCommand.Parameters.Add(new SqlParameter("@Address", this.Address));
@@ -339,7 +341,9 @@ namespace CMSLib
                 sqlCommand.Parameters.Add(new SqlParameter("@UserStatusId", this.UserStatusId));
                 sqlCommand.Parameters.Add(new SqlParameter("@GenderId", this.GenderId));
                 sqlCommand.Parameters.Add(new SqlParameter("@DefaultActionId", this.DefaultActionId));
-                sqlCommand.Parameters.Add(new SqlParameter("@Birthday", this.Birthday));
+                sqlCommand.Parameters.Add(Birthday == DateTime.MinValue
+                    ? new SqlParameter("@Birthday", DBNull.Value)
+                    : new SqlParameter("@Birthday", this.Birthday));
                 sqlCommand.Parameters.Add(new SqlParameter("@UserTypeId", this.UserTypeId));
                 sqlCommand.Parameters.Add(new SqlParameter("@ActUserID", actUserId));
                 sqlCommand.Parameters.Add("@UserId", SqlDbType.Int).Direction = ParameterDirection.Output;
@@ -364,7 +368,6 @@ namespace CMSLib
             {
                 SqlCommand sqlCommand = new SqlCommand("Users_Update") { CommandType = CommandType.StoredProcedure };
                 sqlCommand.Parameters.Add(new SqlParameter("@Username", this.UserName));
-                sqlCommand.Parameters.Add(new SqlParameter("@UserPass", this.UserPass));
                 sqlCommand.Parameters.Add(new SqlParameter("@Password", this.Password));
                 sqlCommand.Parameters.Add(new SqlParameter("@Fullname", this.Fullname));
                 sqlCommand.Parameters.Add(new SqlParameter("@Address", this.Address));
@@ -374,15 +377,17 @@ namespace CMSLib
                 sqlCommand.Parameters.Add(new SqlParameter("@UserStatusId", this.UserStatusId));
                 sqlCommand.Parameters.Add(new SqlParameter("@GenderId", this.GenderId));
                 sqlCommand.Parameters.Add(new SqlParameter("@DefaultActionId", this.DefaultActionId));
-                sqlCommand.Parameters.Add(new SqlParameter("@Birthday", this.Birthday));
+                sqlCommand.Parameters.Add(Birthday == DateTime.MinValue
+                    ? new SqlParameter("@Birthday", DBNull.Value)
+                    : new SqlParameter("@Birthday", this.Birthday));
                 sqlCommand.Parameters.Add(new SqlParameter("@UserTypeId", this.UserTypeId));
                 sqlCommand.Parameters.Add(new SqlParameter("@UserId", this.UserId));
                 sqlCommand.Parameters.Add(new SqlParameter("@ActUserID", actUserId));
                 sqlCommand.Parameters.Add("@SysMessageId", SqlDbType.SmallInt).Direction = ParameterDirection.Output;
                 sqlCommand.Parameters.Add("@SysMessageTypeId", SqlDbType.TinyInt).Direction = ParameterDirection.Output;
                 this.db.ExecuteSQL(sqlCommand);
-                sysMessageId = Convert.ToInt16(sqlCommand.Parameters["@SysMessageId"].Value ?? "0");
-                retVal = Convert.ToByte(sqlCommand.Parameters["@SysMessageTypeId"].Value ?? "0");
+                sysMessageId = Convert.ToInt16(sqlCommand.Parameters["@SysMessageId"].Value == DBNull.Value ? "0" : sqlCommand.Parameters["@SysMessageId"].Value);
+                retVal = Convert.ToByte(sqlCommand.Parameters["@SysMessageTypeId"].Value == DBNull.Value ? "0" : sqlCommand.Parameters["@SysMessageTypeId"].Value);
             }
             catch (Exception ex)
             {
@@ -409,7 +414,9 @@ namespace CMSLib
                 sqlCommand.Parameters.Add(new SqlParameter("@UserStatusId", this.UserStatusId));
                 sqlCommand.Parameters.Add(new SqlParameter("@GenderId", this.GenderId));
                 sqlCommand.Parameters.Add(new SqlParameter("@DefaultActionId", this.DefaultActionId));
-                sqlCommand.Parameters.Add(new SqlParameter("@Birthday", this.Birthday));
+                sqlCommand.Parameters.Add(Birthday == DateTime.MinValue
+                    ? new SqlParameter("@Birthday", DBNull.Value)
+                    : new SqlParameter("@Birthday", this.Birthday));
                 sqlCommand.Parameters.Add(new SqlParameter("@UserTypeId", this.UserTypeId));
                 sqlCommand.Parameters.Add(new SqlParameter("@UserId", this.UserId));
                 sqlCommand.Parameters.Add(new SqlParameter("@ActUserID", actUserId));
@@ -453,7 +460,7 @@ namespace CMSLib
             {
                 if (userId > 0)
                 {
-                    string cmdText = "SELECT * FROM V$USERS WHERE (UserId =" + userId + " )";
+                    string cmdText = "SELECT * FROM Users WHERE (UserId =" + userId + " )";
                     SqlCommand sqlCommand = new SqlCommand(cmdText) { CommandType = CommandType.Text };
                     List<Users> list = this.Init(sqlCommand);
                     if (list.Count >= 1)
@@ -509,7 +516,7 @@ namespace CMSLib
 
         public Users Get(string userName)
         {
-            string cmdText = "SELECT * FROM V$USERS WHERE (username ='" + userName.Trim() + "')";
+            string cmdText = "SELECT * FROM Users WHERE (username ='" + userName.Trim() + "')";
             try
             {
                 SqlCommand sqlCommand = new SqlCommand(cmdText) { CommandType = CommandType.Text };
@@ -545,7 +552,7 @@ namespace CMSLib
 
         public Users GetEmail(string email)
         {
-            string cmdText = "SELECT * FROM V$USERS WHERE (Email ='" + email.Trim() + "')";
+            string cmdText = "SELECT * FROM Users WHERE (Email ='" + email.Trim() + "')";
             try
             {
                 SqlCommand sqlCommand = new SqlCommand(cmdText) { CommandType = CommandType.Text };
@@ -660,7 +667,7 @@ namespace CMSLib
             List<Users> list = new List<Users>();
             try
             {
-                string str = "SELECT * FROM V$USERS ";
+                string str = "SELECT * FROM Users ";
                 if (userName.Length > 0)
                 {
                     str = str + " WHERE (UserName LIKE '%" + userName + "%')";
@@ -682,7 +689,7 @@ namespace CMSLib
             List<Users> list = new List<Users>();
             try
             {
-                string arg = "SELECT * FROM V$USERS ";
+                string arg = "SELECT * FROM Users ";
                 arg = arg + " WHERE UserTypeId = " + userTypeId;
                 SqlCommand sqlCommand = new SqlCommand(arg) { CommandType = CommandType.Text };
                 list = this.Init(sqlCommand);
@@ -750,7 +757,7 @@ namespace CMSLib
             List<Users> list = new List<Users>();
             try
             {
-                string str = "SELECT * FROM V$USERS ";
+                string str = "SELECT * FROM Users ";
                 str += " WHERE UserTypeId BETWEEN 4 AND 7";
                 SqlCommand sqlCommand = new SqlCommand(str) { CommandType = CommandType.Text };
                 return this.Init(sqlCommand);
@@ -766,7 +773,7 @@ namespace CMSLib
             List<Users> list = new List<Users>();
             try
             {
-                string str = "SELECT * FROM V$USERS ";
+                string str = "SELECT * FROM Users ";
                 str += " WHERE UserTypeId = 4 or UserTypeId = 6 or UserTypeId = 7";
                 SqlCommand sqlCommand = new SqlCommand(str);
                 sqlCommand.CommandType = CommandType.Text;
@@ -783,7 +790,7 @@ namespace CMSLib
             List<Users> list = new List<Users>();
             try
             {
-                string cmdText = "SELECT * FROM V$Users";
+                string cmdText = "SELECT * FROM Users";
                 SqlCommand sqlCommand = new SqlCommand(cmdText) { CommandType = CommandType.Text };
                 return this.Init(sqlCommand);
             }

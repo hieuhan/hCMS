@@ -115,12 +115,17 @@ namespace hCMS.Controllers
                 {
                     model.UserId = user.UserId;
                     model.UserName = user.UserName;
+                    model.Password = user.Password;
                     model.FullName = user.Fullname;
                     model.Mobile = user.Mobile;
                     model.Email = user.Email;
+                    model.Address = user.Address;
                     model.GenderId = user.GenderId;
                     model.UserTypeId = user.UserTypeId;
                     model.UserStatusId = user.UserStatusId;
+                    model.DefaultActionId = user.DefaultActionId;
+                    model.BirthDay = user.Birthday;
+                    model.Comments = user.Comments;
                 }
             }
             return View(model);
@@ -133,7 +138,7 @@ namespace hCMS.Controllers
         {
             if (ModelState.IsValid)
             {
-                short cmsMessageId = 0;
+                short sysMessageId = 0;
                 var user = new Users
                 {
                     UserId = model.UserId,
@@ -141,24 +146,27 @@ namespace hCMS.Controllers
                     Password = model.Password,
                     Fullname = model.FullName,
                     Email = model.Email,
+                    Address = model.Address,
                     Mobile = model.Mobile,
                     Birthday = model.BirthDay,
                     GenderId = model.GenderId,
                     UserTypeId = model.UserTypeId,
-                    UserStatusId = model.UserStatusId
+                    UserStatusId = model.UserStatusId,
+                    DefaultActionId = model.DefaultActionId,
+                    Comments = model.Comments
                 };
                 if (model.UserId > 0)
                 {
-                    user.Update(0, ref cmsMessageId);
+                    user.Update(0, ref sysMessageId);
                 }
                 else
                 {
-                    user.Insert(0, ref cmsMessageId);
+                    user.Insert(0, ref sysMessageId);
                 }
 
-                if (cmsMessageId > 0)
+                if (sysMessageId > 0)
                 {
-                    var sysMessage = new SystemMessages().Get(cmsMessageId);
+                    var sysMessage = new SystemMessages().Get(sysMessageId);
                     ModelState.AddModelError(string.Empty, sysMessage.SystemMessageDesc);
                 }
                 else ModelState.AddModelError(string.Empty, "Bạn vui lòng thử lại sau.");
