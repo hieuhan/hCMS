@@ -78,7 +78,6 @@ namespace hCMS.Controllers
             return Redirect("/Users/Login");
         }
 
-        [HttpPost]
         [CmsAuthorize]
         public ActionResult Index(byte userTypeId = 0, byte userStatusId = 0, string userName = "", int page = 1)
         {
