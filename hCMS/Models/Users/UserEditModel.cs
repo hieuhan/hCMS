@@ -23,11 +23,13 @@ namespace hCMS.Models.Users
             "{0} không bao gồm khoảng trắng, chỉ bao gồm chữ cái thường và số.")]
         public string UserName { get; set; }
 
+        public string Password { get; set; }
+
         public string FullName { get; set; }
 
         [Required(ErrorMessage = "{0} (*)")]
         [Display(Name = "Email")]
-        [RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}", ErrorMessage = "{0} không hợp lệ !")]
+        [RegularExpression(@"[a-zA-Z0-9_\.]+@[a-zA-Z]+\.[a-zA-Z]+(\.[a-zA-Z]+)*", ErrorMessage = "{0} không hợp lệ !")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 

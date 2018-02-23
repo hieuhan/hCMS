@@ -44,20 +44,25 @@ namespace hCMS.Controllers
                     new UserLogs { UserName = result.User.UserName, StatusId = result.User.UserStatusId, CrDateTime = result.User.CrDateTime, IPAddress = Request.UserHostAddress, UserAgent = Request.UserAgent }.InsertQuick();
 
                     if (Url.IsLocalUrl(model.ReturnUrl) && model.ReturnUrl.Length > 1 &&
-                        model.ReturnUrl.StartsWith("/")
-                        && !model.ReturnUrl.StartsWith("//") && !model.ReturnUrl.StartsWith("/\\"))
+                        model.ReturnUrl.StartsWith("/") && !model.ReturnUrl.StartsWith("//") &&
+                        !model.ReturnUrl.StartsWith("/\\"))
                     {
                         urlRedirect = model.ReturnUrl;
                     }
-
-                    if (result.User.DefaultActionId > 0)
+                    else
                     {
-                        var action = new Actions().Get(result.User.DefaultActionId);
-                        if (action.ActionId > 0 && !string.IsNullOrEmpty(action.Url))
+                        if (result.User.DefaultActionId > 0)
                         {
-                            urlRedirect = action.Url.StartsWith(CmsConstants.ROOT_PATH) ? action.Url : string.Concat(CmsConstants.ROOT_PATH, action.Url);
+                            var action = new Actions().Get(result.User.DefaultActionId);
+                            if (action.ActionId > 0 && !string.IsNullOrEmpty(action.Url))
+                            {
+                                urlRedirect = action.Url.StartsWith(CmsConstants.ROOT_PATH)
+                                    ? action.Url
+                                    : string.Concat(CmsConstants.ROOT_PATH, action.Url);
+                            }
                         }
                     }
+
                     return Redirect(urlRedirect);
                 }
                 ModelState.AddModelError(string.Empty, result.ActionMessage);
