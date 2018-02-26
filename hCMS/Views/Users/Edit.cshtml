@@ -17,7 +17,7 @@
 </head>
 <body>
 
-    @using (Html.BeginForm("Edit", "Users", FormMethod.Post, null))
+    @using (Html.BeginForm())
     {
         @Html.ValidationSummary(false, "", new { @class = "text-danger w3-center" })
         @Html.AntiForgeryToken()
@@ -31,7 +31,7 @@
         <label class="w3-label w3-left">Giới tính:</label>
         @Html.DropDownListFor(m => m.GenderId, new SelectList(Model.ListGenders, "GenderId", "GenderDesc", Model.GenderId), new { @class = "w3-input w3-border w3-padding-small" })
         <label class="w3-label w3-left">Ngày sinh:</label>
-        @Html.TextBoxFor(m => m.GenderId, new { @class = "w3-input w3-border w3-round w3-padding-small datepicker" })
+        @Html.TextBoxFor(m => m.BirthDay, "{0:dd/MM/yyyy}", new { @class = "w3-input w3-border w3-round w3-padding-small datepicker" })
         <label class="w3-label w3-left">Email:</label>
         @Html.TextBoxFor(m => m.Email, new { @class = "w3-input w3-border w3-round w3-padding-small" })
         <label class="w3-label w3-left">Địa chỉ:</label>
@@ -54,11 +54,28 @@
     }
 <script type="text/javascript">
     $(function () {
-        $(".datepicker").datepicker({ dateFormat: 'dd/mm/yy' });
+        checkSupportForInputTypeDate();
+        $(".datepicker").datepicker({
+            dateFormat: 'dd/mm/yy',
+            changeMonth: true,
+            changeYear: true,
+            selectOtherMonths: true });
         $(".datepicker").datepicker("option", "monthNames", ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"]);
         $(".datepicker").datepicker("option", "monthNamesShort", ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"]);
         $(".datepicker").datepicker("option", "dayNamesMin", ["CN", "T2", "T3", "T4", "T5", "T6", "T7"]);
     });
+    function checkSupportForInputTypeDate() {
+        jQuery.validator.methods.date = function (value, element) {
+            var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+            var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+            if (isSafari || isChrome) {
+                var d = new Date();
+                return this.optional(element) || !/Invalid|NaN/.test(new Date(d.toLocaleDateString(value)));
+            } else {
+                return this.optional(element) || !/Invalid|NaN/.test(new Date(value));
+            }
+        };
+    }
 </script>
 </body>
 </html>

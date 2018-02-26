@@ -50,7 +50,7 @@
     </div>
     <div class="w3-row w3-padding-bottom">
         <div class="w3-col s1 w3-padding-top">
-            <label class="w3-label">Từ khóa:</label>
+            <label class="w3-label">Tên truy cập:</label>
         </div>
         <div class="w3-col s3">
             @Html.TextBoxFor(m => m.UserName, new { @class = "w3-input w3-round w3-border w3-padding-small" })
@@ -106,7 +106,7 @@
                             <td class="w3-border">@user.Email</td>
                             <td class="w3-border">@user.Mobile</td>
                             <td class="w3-border w3-center">
-                                <a href="@(CmsConstants.ROOT_PATH)Users/UserRoles?userId=@user.UserId" class="w3-text-blue w3-hover-text-orange popup" title="Chọn nhóm">Gán</a>
+                                <a href="@(CmsConstants.ROOT_PATH)Users/UserRoles?userId=@user.UserId" class="w3-text-blue w3-hover-text-orange popup" title="Chọn nhóm chức năng">Gán</a>
                             </td>
                             <td class="w3-border w3-center">
                                 <a href="@(CmsConstants.ROOT_PATH)Users/UserActions?userId=@user.UserId" class="w3-text-blue w3-hover-text-orange popup" title="Chọn chức năng">Gán</a>

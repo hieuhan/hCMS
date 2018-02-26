@@ -48,6 +48,9 @@ namespace hCMS.Models.Users
 
         public short DefaultActionId { get; set; }
 
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}",
+            ApplyFormatInEditMode = true)]
         public DateTime BirthDay { get; set; }
 
         public byte UserTypeId { get; set; }

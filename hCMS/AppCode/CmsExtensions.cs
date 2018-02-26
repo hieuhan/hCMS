@@ -55,14 +55,14 @@ namespace hCMS.Library
             return new RoleActions();
         }
 
-        public static Actions ActionsGetByActionId(this List<Actions> list, short actionId)
-        {
-            if (list.HasValue())
-            {
-                return list.FirstOrDefault(m => m.ActionId == actionId);
-            }
-            return new Actions();
-        }
+        //public static Actions ActionsGetByActionId(this List<Actions> list, short actionId)
+        //{
+        //    if (list.HasValue())
+        //    {
+        //        return list.FirstOrDefault(m => m.ActionId == actionId);
+        //    }
+        //    return new Actions();
+        //}
 
         public static string GetLinkPage(int page = 1)
         {
