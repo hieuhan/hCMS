@@ -9,7 +9,7 @@ namespace hCMS.Controllers
     public class CountriesController : Controller
     {
         // GET: Countries
-        public ActionResult Index()
+        public ActionResult Index(string keyword="",int page = 1)
         {
             return View();
         }
