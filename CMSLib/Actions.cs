@@ -367,7 +367,7 @@ namespace CMSLib
         {
             try
             {
-                SqlCommand sqlCommand = new SqlCommand("Actions_GetAllHierachy111");
+                SqlCommand sqlCommand = new SqlCommand("Actions_GetAllHierachy");
                 if (!string.IsNullOrEmpty(paddingChar))
                 {
                     sqlCommand.Parameters.Add(new SqlParameter("@PaddingChar", paddingChar));
@@ -405,7 +405,7 @@ namespace CMSLib
         {
             try
             {
-                string cmdText = "SELECT * FROM V$ActionsNA_AddLevelId WHERE (ActionId =" + id + ")";
+                string cmdText = "SELECT * FROM Actions WHERE (ActionId =" + id + ")";
                 SqlCommand sqlCommand = new SqlCommand(cmdText) { CommandType = CommandType.Text };
                 List<Actions> listActions = this.Init(sqlCommand);
                 if (listActions.Count >= 1)

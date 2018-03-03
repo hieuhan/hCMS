@@ -292,7 +292,7 @@ namespace CMSLib
             {
                 SqlCommand sqlCommand = new SqlCommand("Users_Insert");
                 sqlCommand.CommandType = CommandType.StoredProcedure;
-                sqlCommand.Parameters.Add(new SqlParameter("@Username", this.UserName));
+                sqlCommand.Parameters.Add(new SqlParameter("@UserName", this.UserName));
                 //sqlCommand.Parameters.Add(new SqlParameter("@UserPass", this.UserPass));
                 sqlCommand.Parameters.Add(new SqlParameter("@Password", this.Password));
                 sqlCommand.Parameters.Add(new SqlParameter("@Fullname", this.Fullname));
@@ -307,7 +307,7 @@ namespace CMSLib
                     ? new SqlParameter("@Birthday", DBNull.Value)
                     : new SqlParameter("@Birthday", this.Birthday));
                 sqlCommand.Parameters.Add(new SqlParameter("@UserTypeId", this.UserTypeId));
-                sqlCommand.Parameters.Add(new SqlParameter("@ActUserID", actUserId));
+                //sqlCommand.Parameters.Add(new SqlParameter("@ActUserID", actUserId));
                 sqlCommand.Parameters.Add("@UserId", SqlDbType.Int).Direction = ParameterDirection.Output;
                 sqlCommand.Parameters.Add("@SysMessageId", SqlDbType.SmallInt).Direction = ParameterDirection.Output;
                 sqlCommand.Parameters.Add("@SysMessageTypeId", SqlDbType.TinyInt).Direction = ParameterDirection.Output;
@@ -382,7 +382,7 @@ namespace CMSLib
                     : new SqlParameter("@Birthday", this.Birthday));
                 sqlCommand.Parameters.Add(new SqlParameter("@UserTypeId", this.UserTypeId));
                 sqlCommand.Parameters.Add(new SqlParameter("@UserId", this.UserId));
-                sqlCommand.Parameters.Add(new SqlParameter("@ActUserID", actUserId));
+                //sqlCommand.Parameters.Add(new SqlParameter("@ActUserID", actUserId));
                 sqlCommand.Parameters.Add("@SysMessageId", SqlDbType.SmallInt).Direction = ParameterDirection.Output;
                 sqlCommand.Parameters.Add("@SysMessageTypeId", SqlDbType.TinyInt).Direction = ParameterDirection.Output;
                 this.db.ExecuteSQL(sqlCommand);
@@ -452,7 +452,7 @@ namespace CMSLib
             {
                 SqlCommand sqlCommand = new SqlCommand("Users_Delete") { CommandType = CommandType.StoredProcedure };
                 sqlCommand.Parameters.Add(new SqlParameter("@UserId", this.UserId));
-                sqlCommand.Parameters.Add(new SqlParameter("@ActUserId", actUserId));
+                //sqlCommand.Parameters.Add(new SqlParameter("@ActUserId", actUserId));
                 sqlCommand.Parameters.Add("@SysMessageId", SqlDbType.SmallInt).Direction = ParameterDirection.Output;
                 sqlCommand.Parameters.Add("@SysMessageTypeId", SqlDbType.TinyInt).Direction = ParameterDirection.Output;
                 this.db.ExecuteSQL(sqlCommand);

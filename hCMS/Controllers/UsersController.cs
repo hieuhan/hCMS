@@ -5,11 +5,13 @@ using CMSViewLib;
 using hCMS.Library;
 using hCMS.Models;
 using hCMS.Models.Users;
+using LibUtils;
 
 namespace hCMS.Controllers
 {
     public class UsersController : Controller
     {
+        private int _userId = SessionHelpers.UserId;
         // GET: Users
         [HttpGet]
         [AllowAnonymous]
@@ -33,7 +35,7 @@ namespace hCMS.Controllers
             if (ModelState.IsValid)
             {
                 string urlRedirect = "/Users/ChangePassword";
-                var result = UserHelpers.Login(model.UserName, model.Password);
+                var result = UserHelpers.Login(model.UserName, md5.MD5Hash(model.Password));
                 if (result.ActionStatus.Equals("OK"))
                 {
                     SessionHelpers.UserId = result.User.UserId;
@@ -115,7 +117,7 @@ namespace hCMS.Controllers
                 {
                     model.UserId = user.UserId;
                     model.UserName = user.UserName;
-                    model.Password = user.Password;
+                    //model.Password = user.Password;
                     model.FullName = user.Fullname;
                     model.Mobile = user.Mobile;
                     model.Email = user.Email;
@@ -143,7 +145,7 @@ namespace hCMS.Controllers
                 {
                     UserId = model.UserId,
                     UserName = model.UserName,
-                    Password = model.Password,
+                    //Password = md5.MD5Hash(model.Password),
                     Fullname = model.FullName,
                     Email = model.Email,
                     Address = model.Address,
@@ -170,6 +172,54 @@ namespace hCMS.Controllers
                     ModelState.AddModelError(string.Empty, sysMessage.SystemMessageDesc);
                 }
                 else ModelState.AddModelError(string.Empty, "Bạn vui lòng thử lại sau.");
+            }
+            return View(model);
+        }
+
+        [HttpGet]
+        [CmsAuthorize]
+        public ActionResult Create()
+        {
+            return View(new UserCreateModel());
+        }
+
+        [HttpPost]
+        [CmsAuthorize]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(UserCreateModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                short sysMessageId = 0;
+                byte sysMessageTypeId = 0;
+                model.SystemStatus = SystemStatus.Error;
+                var user = new Users
+                {
+                    UserId = model.UserId,
+                    UserName = model.UserName,
+                    Password = md5.MD5Hash(model.Password),
+                    Fullname = model.FullName,
+                    Email = model.Email,
+                    Address = model.Address,
+                    Mobile = model.Mobile,
+                    Birthday = model.BirthDay,
+                    GenderId = model.GenderId,
+                    UserTypeId = model.UserTypeId,
+                    UserStatusId = model.UserStatusId,
+                    DefaultActionId = model.DefaultActionId,
+                    Comments = model.Comments
+                };
+                sysMessageTypeId = user.Insert(0, ref sysMessageId);
+                if (sysMessageId > 0)
+                {
+                    var sysMessage = new SystemMessages().Get(sysMessageId);
+                    if (sysMessageTypeId == CmsConstants.SystemMessageIdSuccess)
+                    {
+                        model.SystemStatus = SystemStatus.Success;
+                    }
+                    ModelState.AddModelError("SystemMessages", sysMessage.SystemMessageDesc);
+                }
+                else ModelState.AddModelError("SystemMessages", "Bạn vui lòng thử lại sau.");
             }
             return View(model);
         }
@@ -204,6 +254,200 @@ namespace hCMS.Controllers
             }
             return Redirect("/Users/Index");
         }
+
+        [CmsAuthorize]
+        public ActionResult ChangePassword()
+        {
+            var model = new ChangePasswordModel
+            {
+                UserName = SessionHelpers.UserName
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        [CmsAuthorize]
+        [ValidateAntiForgeryToken]
+        public ActionResult ChangePassword(ChangePasswordModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                short sysMessageId = 0;
+                byte sysMessageTypeId = 0;
+                model.SystemStatus = SystemStatus.Error;
+                Users user = new Users().Get(_userId);
+                if (user.UserId > 0)
+                {
+                    if (user.Password != md5.MD5Hash(model.CurrentPassword))
+                    {
+                        ModelState.AddModelError("SystemMessages", "Mật khẩu cũ không chính xác.");
+                    }
+                    else
+                    {
+                        user.Password = md5.MD5Hash(model.Password);
+                        sysMessageTypeId = user.Update(_userId, ref sysMessageId);
+                        if (sysMessageId > 0)
+                        {
+                            var sysMessage = new SystemMessages().Get(sysMessageId);
+                            if (sysMessageTypeId == CmsConstants.SystemMessageIdSuccess)
+                            {
+                                model.SystemStatus = SystemStatus.Success;
+                            }
+                            ModelState.AddModelError("SystemMessages", sysMessage.SystemMessageDesc);
+                        }
+                        else ModelState.AddModelError("SystemMessages", "Bạn vui lòng thử lại sau.");
+                    }
+                }
+                else ModelState.AddModelError("SystemMessages", "User không tồn tại.");
+            }
+            return View(model);
+        }
+
+        [CmsAuthorize]
+        public ActionResult Profile()
+        {
+            var model = new UserProfileModel();
+            var user = new Users().Get(_userId);
+            if (user.UserId > 0)
+            {
+                model.UserId = user.UserId;
+                model.UserName = user.UserName;
+                //model.Password = user.Password;
+                model.FullName = user.Fullname;
+                model.Mobile = user.Mobile;
+                model.Email = user.Email;
+                model.Address = user.Address;
+                model.GenderId = user.GenderId;
+                model.UserTypeId = user.UserTypeId;
+                model.UserStatusId = user.UserStatusId;
+                model.DefaultActionId = user.DefaultActionId;
+                model.BirthDay = user.Birthday;
+                model.Comments = user.Comments;
+            }
+            return View(model);
+        }
+
+        [HttpPost]
+        [CmsAuthorize]
+        [ValidateAntiForgeryToken]
+        public ActionResult Profile(UserProfileModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                short sysMessageId = 0;
+                byte sysMessageTypeId = 0;
+                model.SystemStatus = SystemStatus.Error;
+                Users user = new Users().Get(_userId);
+                if (user.UserId > 0)
+                {
+                    user.Fullname = model.FullName;
+                    user.Email = model.Email;
+                    user.Mobile = model.Mobile;
+                    user.GenderId = model.GenderId;
+                    user.Birthday = model.BirthDay;
+                    user.Address = model.Address;
+                    user.UserTypeId = model.UserTypeId;
+                    user.UserStatusId = model.UserStatusId;
+                    user.DefaultActionId = model.DefaultActionId;
+                    user.Comments = model.Comments;
+                    sysMessageTypeId = user.Update(_userId, ref sysMessageId);
+                    if (sysMessageId > 0)
+                    {
+                        var sysMessage = new SystemMessages().Get(sysMessageId);
+                        if (sysMessageTypeId == CmsConstants.SystemMessageIdSuccess)
+                        {
+                            model.SystemStatus = SystemStatus.Success;
+                        }
+                        ModelState.AddModelError("SystemMessages", sysMessage.SystemMessageDesc);
+                    }
+                    else ModelState.AddModelError("SystemMessages", "Bạn vui lòng thử lại sau.");
+                }
+                else ModelState.AddModelError("SystemMessages", "User không tồn tại.");
+            }
+            return View(model);
+        }
+
+        [CmsAuthorize]
+        public ActionResult UserRoles(int userId)
+        {
+            var model = new UserRolesModel
+            {
+                UserId = userId,
+                ListUserRoles = new UserRoles().GetListByUserId(userId)
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        [CmsAuthorize]
+        [ValidateAntiForgeryToken]
+        public ActionResult UserRoles(UserRolesModel model)
+        {
+            var userRoles = new UserRoles
+            {
+                UserId = model.UserId
+            };
+            userRoles.DeleteQuickBy(_userId);
+            if (model.RolesId != null && model.RolesId.Length > 0)
+            {
+                foreach (var item in model.RolesId)
+                {
+                    userRoles.RoleId = item;
+                    userRoles.InsertQuick(_userId);
+                }
+            }
+            model.ListUserRoles = new UserRoles().GetListByUserId(model.UserId);
+            model.SystemStatus = SystemStatus.Success;
+            ModelState.AddModelError("SystemMessages", "Gán nhóm chức năng cho User thành công !");
+            return View(model);
+        }
+
+        [CmsAuthorize]
+        public ActionResult UserActions(int userId)
+        {
+            var model = new UserActionsModel
+            {
+                UserId = userId,
+                ListUserActions = new UserActions().GetByUser(userId)
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        [CmsAuthorize]
+        [ValidateAntiForgeryToken]
+        public ActionResult UserActions(UserActionsModel model)
+        {
+            var userAction = new UserActions
+            {
+                UserId = model.UserId
+            };
+            userAction.DeleteQuickBy();
+            if (model.ActionsId != null && model.ActionsId.Length > 0)
+            {
+                foreach (var actionId in model.ActionsId)
+                {
+                    userAction.ActionId = actionId;
+                    userAction.InsertQuick();
+                }
+            }
+            model.ListUserActions = new UserActions().GetByUser(model.UserId);
+            model.SystemStatus = SystemStatus.Success;
+            ModelState.AddModelError("SystemMessages", "Gán Chức năng cho User thành công !");
+            return View(model);
+        }
+
+        //[CmsAuthorize]
+        //public ActionResult UserSites(int userId)
+        //{
+        //    var model = new UserSitesModel
+        //    {
+        //        UserId = userId,
+        //        ListSites = Sites.Static_GetList(0),
+        //        ListUserSites = new UserSites().GetByUser(userId)
+        //    };
+        //    return View(model);
+        //}
 
     }
 }

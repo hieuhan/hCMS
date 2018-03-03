@@ -15,3 +15,9 @@ E:\GitHub\hCMS\LibDatabase\obj\Debug\LibDatabase.csprojResolveAssemblyReference.
 E:\GitHub\hCMS\LibDatabase\obj\Debug\LibDatabase.csproj.CoreCompileInputs.cache
 E:\GitHub\hCMS\LibDatabase\obj\Debug\LibDatabase.dll
 E:\GitHub\hCMS\LibDatabase\obj\Debug\LibDatabase.pdb
+D:\hieuhan\hCMS\LibDatabase\bin\Debug\LibDatabase.dll
+D:\hieuhan\hCMS\LibDatabase\bin\Debug\LibDatabase.pdb
+D:\hieuhan\hCMS\LibDatabase\obj\Debug\LibDatabase.csprojResolveAssemblyReference.cache
+D:\hieuhan\hCMS\LibDatabase\obj\Debug\LibDatabase.csproj.CoreCompileInputs.cache
+D:\hieuhan\hCMS\LibDatabase\obj\Debug\LibDatabase.dll
+D:\hieuhan\hCMS\LibDatabase\obj\Debug\LibDatabase.pdb

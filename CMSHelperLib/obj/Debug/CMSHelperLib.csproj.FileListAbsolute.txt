@@ -10,3 +10,9 @@ E:\GitHub\hCMS\CMSHelperLib\obj\Debug\CMSHelperLib.csprojResolveAssemblyReferenc
 E:\GitHub\hCMS\CMSHelperLib\obj\Debug\CMSHelperLib.csproj.CoreCompileInputs.cache
 E:\GitHub\hCMS\CMSHelperLib\obj\Debug\CMSHelperLib.dll
 E:\GitHub\hCMS\CMSHelperLib\obj\Debug\CMSHelperLib.pdb
+D:\hieuhan\hCMS\CMSHelperLib\bin\Debug\CMSHelperLib.dll
+D:\hieuhan\hCMS\CMSHelperLib\bin\Debug\CMSHelperLib.pdb
+D:\hieuhan\hCMS\CMSHelperLib\obj\Debug\CMSHelperLib.csprojResolveAssemblyReference.cache
+D:\hieuhan\hCMS\CMSHelperLib\obj\Debug\CMSHelperLib.csproj.CoreCompileInputs.cache
+D:\hieuhan\hCMS\CMSHelperLib\obj\Debug\CMSHelperLib.dll
+D:\hieuhan\hCMS\CMSHelperLib\obj\Debug\CMSHelperLib.pdb

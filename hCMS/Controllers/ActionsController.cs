@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using CMSHelperLib;
 using CMSLib;
 using hCMS.Library;
+using hCMS.Models;
 using hCMS.Models.Actions;
 
 namespace hCMS.Controllers
@@ -54,6 +55,8 @@ namespace hCMS.Controllers
             if (ModelState.IsValid)
             {
                 short systemMessageId = 0, levelId = 0;
+                byte sysMessageTypeId = 0;
+                model.SystemStatus = SystemStatus.Error;
                 if (model.ParentActionId > 0)
                 {
                     Actions parentAction = new Actions().Get(model.ParentActionId);
@@ -74,19 +77,20 @@ namespace hCMS.Controllers
                     ActionStatusId = model.ActionStatusId,
                     LevelId = levelId
                 };
-                if (model.ActionId > 0)
-                    action.Update(0, _userId, ref systemMessageId);
-                else
-                    action.Insert(0, _userId, ref systemMessageId);
+                sysMessageTypeId = model.ActionId > 0 ? action.Update(0, _userId, ref systemMessageId) : action.Insert(0, _userId, ref systemMessageId);
 
                 if (systemMessageId > 0)
                 {
                     var systemMessage = new SystemMessages().Get(systemMessageId);
-                    ModelState.AddModelError("Messages", systemMessage.SystemMessageDesc);
+                    if (sysMessageTypeId == CmsConstants.SystemMessageIdSuccess)
+                    {
+                        model.SystemStatus = SystemStatus.Success;
+                    }
+                    ModelState.AddModelError("SystemMessages", systemMessage.SystemMessageDesc);
                 }
                 else
                 {
-                    ModelState.AddModelError("Messages", "Bạn vui lòng thử lại sau.");
+                    ModelState.AddModelError("SystemMessages", "Bạn vui lòng thử lại sau.");
                 }
             }
             return View(model);
@@ -144,7 +148,8 @@ namespace hCMS.Controllers
             }
             model.ListRoles = new Roles().GetAll();
             model.ListRoleActions = new RoleActions().GetByActionId(model.ActionId);
-            ModelState.AddModelError(string.Empty, "Gán quyền cho Chức năng thành công !");
+            model.SystemStatus = SystemStatus.Success;
+            ModelState.AddModelError("SystemMessages", "Gán quyền cho Chức năng thành công !");
             return View(model);
         }
 

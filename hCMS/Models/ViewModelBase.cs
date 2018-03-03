@@ -16,6 +16,15 @@ namespace hCMS.Models
 
         public PaginationModel Pagination { get; set; }
 
-        public string Messages { get; set; }
+        public SystemStatus SystemStatus { get; set; }
+
+        public string SystemMessages { get; set; }
+    }
+
+    public enum SystemStatus
+    {
+        Success,
+        Error,
+        Unknow
     }
 }

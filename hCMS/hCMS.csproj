@@ -164,8 +164,13 @@
     <Compile Include="Models\Roles\RoleActionsModel.cs" />
     <Compile Include="Models\Roles\RolesModel.cs" />
     <Compile Include="Models\Shared\HeaderModel.cs" />
+    <Compile Include="Models\Users\ChangePasswordModel.cs" />
+    <Compile Include="Models\Users\UserActionsModel.cs" />
+    <Compile Include="Models\Users\UserCreateModel.cs" />
     <Compile Include="Models\Users\UserEditModel.cs" />
     <Compile Include="Models\Users\UserLoginModel.cs" />
+    <Compile Include="Models\Users\UserProfileModel.cs" />
+    <Compile Include="Models\Users\UserRolesModel.cs" />
     <Compile Include="Models\Users\UsersModel.cs" />
     <Compile Include="Models\ViewModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -868,6 +873,12 @@
     <Content Include="Views\Shared\PartialPagination.cshtml" />
     <Content Include="Views\Users\Edit.cshtml" />
     <Content Include="Views\Countries\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\hCMS.pubxml" />
+    <Content Include="Views\Users\ChangePassword.cshtml" />
+    <Content Include="Views\Users\Profile.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\UserRoles.cshtml" />
+    <Content Include="Views\Users\UserActions.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

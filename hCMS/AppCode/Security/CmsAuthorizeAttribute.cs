@@ -17,7 +17,7 @@ namespace hCMS.Library
             if (SessionHelpers.UserId > 0)
             {
                 bool isInPageRole = new Users(CmsConstants.CONNECTION_STRING).HasPriv(SessionHelpers.UserId,
-                                        HttpContext.Current.Request.Url.AbsolutePath);
+                    HttpContext.Current.Request.Url.AbsolutePath);
                 if (!isInPageRole)
                 {
                     filterContext.Result = new RedirectToRouteResult(new

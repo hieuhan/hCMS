@@ -126,7 +126,7 @@ namespace CMSLib
             try
             {
                 SqlCommand sqlCommand = new SqlCommand("Roles_Insert") { CommandType = CommandType.StoredProcedure };
-                sqlCommand.Parameters.Add(new SqlParameter("@CrUserId", actUserId));
+                //sqlCommand.Parameters.Add(new SqlParameter("@CrUserId", actUserId));
                 sqlCommand.Parameters.Add(new SqlParameter("@RoleName", this.RoleName));
                 sqlCommand.Parameters.Add(new SqlParameter("@RoleDesc", this.RoleDesc));
                 sqlCommand.Parameters.Add("@RoleId", SqlDbType.SmallInt).Direction = ParameterDirection.Output;
@@ -145,13 +145,13 @@ namespace CMSLib
             return retVal;
         }
 
-        public short Update(int actUserId, ref short sysMessageId)
+        public byte Update(int actUserId, ref short sysMessageId)
         {
             byte retVal = 0;
             try
             {
                 SqlCommand sqlCommand = new SqlCommand("Roles_Update") { CommandType = CommandType.StoredProcedure };
-                sqlCommand.Parameters.Add(new SqlParameter("@CrUserId", actUserId));
+                //sqlCommand.Parameters.Add(new SqlParameter("@CrUserId", actUserId));
                 sqlCommand.Parameters.Add(new SqlParameter("@RoleName", this.RoleName));
                 sqlCommand.Parameters.Add(new SqlParameter("@RoleDesc", this.RoleDesc));
                 sqlCommand.Parameters.Add(new SqlParameter("@RoleId", this.RoleId));
@@ -175,7 +175,7 @@ namespace CMSLib
             try
             {
                 SqlCommand sqlCommand = new SqlCommand("Roles_Delete") { CommandType = CommandType.StoredProcedure };
-                sqlCommand.Parameters.Add(new SqlParameter("@CrUserId", actUserId));
+                //sqlCommand.Parameters.Add(new SqlParameter("@CrUserId", actUserId));
                 sqlCommand.Parameters.Add(new SqlParameter("@RoleId", this.RoleId));
                 sqlCommand.Parameters.Add("@SysMessageId", SqlDbType.SmallInt).Direction = ParameterDirection.Output;
                 sqlCommand.Parameters.Add("@SysMessageTypeId", SqlDbType.TinyInt).Direction = ParameterDirection.Output;

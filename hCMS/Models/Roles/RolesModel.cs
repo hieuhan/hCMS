@@ -6,7 +6,7 @@ using System.Web;
 
 namespace hCMS.Models.Roles
 {
-    public class RolesModel
+    public class RolesModel:ViewModelBase
     {
         public short RoleId { get; set; }
 

@@ -1,0 +1,6 @@
+D:\hieuhan\hCMS\CMSHelperLib\bin\Release\CMSHelperLib.dll
+D:\hieuhan\hCMS\CMSHelperLib\bin\Release\CMSHelperLib.pdb
+D:\hieuhan\hCMS\CMSHelperLib\obj\Release\CMSHelperLib.csprojResolveAssemblyReference.cache
+D:\hieuhan\hCMS\CMSHelperLib\obj\Release\CMSHelperLib.csproj.CoreCompileInputs.cache
+D:\hieuhan\hCMS\CMSHelperLib\obj\Release\CMSHelperLib.dll
+D:\hieuhan\hCMS\CMSHelperLib\obj\Release\CMSHelperLib.pdb

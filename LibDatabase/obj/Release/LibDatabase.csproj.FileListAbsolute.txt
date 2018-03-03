@@ -1,0 +1,5 @@
+D:\hieuhan\hCMS\LibDatabase\bin\Release\LibDatabase.dll
+D:\hieuhan\hCMS\LibDatabase\bin\Release\LibDatabase.pdb
+D:\hieuhan\hCMS\LibDatabase\obj\Release\LibDatabase.csproj.CoreCompileInputs.cache
+D:\hieuhan\hCMS\LibDatabase\obj\Release\LibDatabase.dll
+D:\hieuhan\hCMS\LibDatabase\obj\Release\LibDatabase.pdb

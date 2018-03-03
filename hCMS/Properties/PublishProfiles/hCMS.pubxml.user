@@ -1,0 +1,2377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>D:\Publish\hCMS</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/css/1-w3.css">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/css/2-font-awesome.css">
+      <publishTime>03/03/2018 18:17:41</publishTime>
+    </File>
+    <File Include="Assets/css/3-style.css">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/css/4-jquery-ui.css">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/fonts/fontawesome-webfont.eot">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/fonts/fontawesome-webfont.ttf">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/fonts/fontawesome-webfont.woff">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/fonts/fontawesome-webfont.woff2">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/add.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/admin.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ajax-loader.gif">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/alert.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/an.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/an_hover.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/bg_top.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/bottom-center.gif">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/bottom-left.gif">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/bottom-right.gif">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/bottom_left_corner.gif">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/bo_duyet.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/bo_duyet_hover.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/buleft.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/chi_tiet.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/chi_tiet_hover.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/chuyenmuc.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/chuyenmuc_hover.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/confirm.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/delete.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/down.gif">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/duyettin.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/duyettin_hover.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/email_go.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/email_to_friend.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/english.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/error.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/facebook.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/google.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/hien.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/hien_hover.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/home_12.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/home_12_hover.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/3gp.jpg">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/accessories_text_editor.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/add.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/add16x16.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/addquick.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/alarm.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/application_get.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/app_edit.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/app_edit_.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/arrow-curve-180-left.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/arrow-curve.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/browser_download.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/cake.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/calendar1_accept.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/calendar1_add2.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/category.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/cd_data.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/chat.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/clipboard.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/clock_green.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/clock_red.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/cross-script.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/delete.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/delete3D.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/deletebig.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/dir.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/document-copy.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/document.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/document_accept.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/document_delete3.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/document_go.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/document_save_as.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/document_share.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/edit_add.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/edit_delete.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/feed_link.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/file_copy.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/filterclose.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/flv.jpg">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/folder.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/folder_music.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/go_previous_rtl.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/graphics_image_viewer.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/hard_disk.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/ie.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/ie2.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/information.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/java.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/like.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/list.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/list_go.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/location_news.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/logout.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/mediaType.jpg">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/microphonepressed.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/microphone_sh.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/mobile.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/move.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/move_waiting_up.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/movies.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/music_note.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/music_note_sh.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/my_computer.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/newspaper_info.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/no.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/note.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/partner.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/password.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/performer_sh.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/pictures.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/pictures_folder.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/plus_orange.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/preferences_system_windows_actions.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/preview.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/refresh.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/report_check.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/right3green.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/rss_file_add.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/rss_file_remove.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/save.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/save_add.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/scissors.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/send_email_user_letter.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/sizefile.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/smserver.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/spinner3-bluey.gif">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/status_unknown.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/stock_task_assigned.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/text_list_bullets.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/txt_file.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/united_nations.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/update.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/upload_file.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/user_group.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/user_group2.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/user_male.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/user_male_accept.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/user_male_add2.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/user_male_edit.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/video.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/video_clip.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/view.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/wallpaper_folder_white.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/web_page.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/web_violet.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/Icons/world_link.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/icon_boduyet.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/icon_duyet.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/inforCompany.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/information.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/khoa_tin.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/khoa_tin_hover.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/loading.gif">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/luat1.jpg">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/luu_lai.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/luu_lai_hover.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/luu_quay_lai.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/luu_quay_lai_hover.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/luu_va_them_tiep.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/luu_va_them_tiep_hover.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/MenuDown.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/menutopbar.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/msgBoxBackGround.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/muitendieuhuong.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/phone_add.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/quanglytin.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/quanglytin_hover.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/quangly_thaoluan.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/quangly_thaoluan_hover.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/right.gif">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/saaraan.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/stepdown.gif">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/stepup.gif">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/suabaiviet.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/suabaiviet_hover.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/sua_thoi_gian.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/sua_thoi_gian_hover.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/them_moi.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/them_moi_hover.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/tick.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/top-center.gif">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/top-left.gif">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/top-right.gif">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/tu_choi.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/tu_choi_hover.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/twitter.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-bg_diagonals-thick_18_b81900_40x40.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-bg_diagonals-thick_20_666666_40x40.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-bg_flat_0_aaaaaa_40x100.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-bg_flat_75_ffffff_40x100.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-bg_glass_100_f6f6f6_1x400.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-bg_glass_100_fdf5ce_1x400.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-bg_glass_75_d0e5f5_1x400.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-bg_glass_85_dfeffc_1x400.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-bg_gloss-wave_35_f6a828_500x100.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-bg_highlight-soft_100_eeeeee_1x100.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-bg_highlight-soft_75_ffe45c_1x100.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-bg_inset-hard_100_f5f8f9_1x100.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-bg_inset-hard_100_fcfdfd_1x100.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-icons_217bc0_256x240.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-icons_222222_256x240.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-icons_228ef1_256x240.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-icons_444444_256x240.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-icons_454545_256x240.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-icons_469bdd_256x240.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-icons_555555_256x240.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-icons_6da8d5_256x240.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-icons_777620_256x240.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-icons_777777_256x240.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-icons_888888_256x240.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-icons_cc0000_256x240.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-icons_d8e7f3_256x240.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-icons_ef8c08_256x240.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-icons_f9bd01_256x240.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-icons_ffd27a_256x240.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/ui-icons_ffffff_256x240.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/upbottom.gif">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/uptop.gif">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/user.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/user_default.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/vietnamese.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/warning.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/xoa_tin.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/xoa_tin_hover.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/images/yahoo.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/adapters/jquery.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/build-config.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/CHANGES.md">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/ckeditor.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/config.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/contents.css">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/af.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/ar.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/bg.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/bn.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/bs.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/ca.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/cs.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/cy.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/da.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/de.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/el.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/en-au.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/en-ca.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/en-gb.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/en.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/eo.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/es.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/et.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/eu.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/fa.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/fi.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/fo.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/fr-ca.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/fr.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/gl.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/gu.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/he.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/hi.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/hr.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/hu.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/id.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/is.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/it.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/ja.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/ka.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/km.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/ko.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/ku.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/lt.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/lv.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/mk.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/mn.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/ms.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/nb.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/nl.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/no.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/pl.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/pt-br.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/pt.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/ro.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/ru.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/si.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/sk.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/sl.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/sq.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/sr-latn.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/sr.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/sv.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/th.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/tr.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/ug.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/uk.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/vi.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/zh-cn.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/lang/zh.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/LICENSE.md">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/a11yhelp.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/ar.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/bg.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/ca.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/cs.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/cy.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/da.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/de.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/el.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/en.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/eo.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/es.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/et.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/fa.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/fi.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/fr-ca.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/fr.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/gl.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/gu.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/he.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/hi.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/hr.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/hu.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/id.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/it.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/ja.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/km.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/ko.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/ku.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/lt.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/lv.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/mk.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/mn.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/nb.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/nl.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/no.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/pl.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/pt-br.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/pt.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/ro.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/ru.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/si.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/sk.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/sl.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/sq.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/sr-latn.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/sr.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/sv.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/th.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/tr.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/ug.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/uk.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/vi.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/zh-cn.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/zh.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/a11yhelp/dialogs/lang/_translationstatus.txt">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/about/dialogs/about.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/about/dialogs/hidpi/logo_ckeditor.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/about/dialogs/logo_ckeditor.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/audio/dialogs/audio.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/audio/images/icon.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/audio/images/placeholder.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/audio/plugin.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/clipboard/dialogs/paste.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/colordialog/dialogs/colordialog.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/dialog/dialogDefinition.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/div/dialogs/div.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/fakeobjects/images/spacer.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/find/dialogs/find.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/dialogs/flash.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/icons/flash.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/icons/hidpi/flash.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/images/placeholder.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/af.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/ar.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/bg.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/bn.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/bs.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/ca.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/cs.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/cy.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/da.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/de.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/el.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/en-au.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/en-ca.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/en-gb.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/en.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/eo.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/es.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/et.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/eu.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/fa.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/fi.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/fo.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/fr-ca.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/fr.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/gl.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/gu.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/he.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/hi.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/hr.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/hu.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/id.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/is.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/it.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/ja.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/ka.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/km.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/ko.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/ku.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/lt.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/lv.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/mk.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/mn.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/ms.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/nb.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/nl.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/no.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/pl.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/pt-br.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/pt.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/ro.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/ru.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/si.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/sk.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/sl.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/sq.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/sr-latn.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/sr.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/sv.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/th.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/tr.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/ug.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/uk.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/vi.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/zh-cn.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/lang/zh.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/flash/plugin.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/forms/dialogs/button.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/forms/dialogs/checkbox.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/forms/dialogs/form.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/forms/dialogs/hiddenfield.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/forms/dialogs/radio.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/forms/dialogs/select.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/forms/dialogs/textarea.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/forms/dialogs/textfield.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/forms/images/hiddenfield.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/help.txt">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/icons.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/icons_hidpi.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/iframe/dialogs/iframe.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/iframe/images/placeholder.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/image/dialogs/image.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/image/images/noimage.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/jwplayer/dialogs/jwplayer.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/jwplayer/jwplayer/jwPlayer.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/jwplayer/jwplayer/jwplayer.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/jwplayer/jwplayer/player.swf">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/jwplayer/jwplayer/skin/beelden.zip">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/jwplayer/jwplayer/skin/glow.zip">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/jwplayer/jwplayer/skin/modieus.zip">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/jwplayer/jwplayer/skin/simple.zip">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/jwplayer/jwplayer/skin/snel.zip">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/jwplayer/jwplayer/skin/stijl.zip">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/jwplayer/jwplayer/skin/stormtrooper.zip">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/jwplayer/jwplayer/swfobject.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/jwplayer/jwplayer/yt.swf">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/jwplayer/plugin.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/link/dialogs/anchor.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/link/dialogs/link.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/link/images/anchor.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/link/images/hidpi/anchor.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/liststyle/dialogs/liststyle.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/magicline/images/hidpi/icon.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/magicline/images/icon.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/media/dialogs/media.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/media/icons/hidpi/flash.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/media/icons/media.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/media/images/placeholder.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/media/lang/en.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/media/lang/vi.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/media/plugin.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/pagebreak/images/pagebreak.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/pastefromword/filter/default.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/preview/preview.html">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/scayt/dialogs/options.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/scayt/dialogs/toolbar.css">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/scayt/LICENSE.md">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/scayt/README.md">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/showblocks/images/block_address.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/showblocks/images/block_blockquote.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/showblocks/images/block_div.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/showblocks/images/block_h1.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/showblocks/images/block_h2.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/showblocks/images/block_h3.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/showblocks/images/block_h4.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/showblocks/images/block_h5.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/showblocks/images/block_h6.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/showblocks/images/block_p.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/showblocks/images/block_pre.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/dialogs/smiley.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/angel_smile.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/angel_smile.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/angry_smile.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/angry_smile.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/broken_heart.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/broken_heart.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/confused_smile.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/confused_smile.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/cry_smile.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/cry_smile.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/devil_smile.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/devil_smile.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/embaressed_smile.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/embarrassed_smile.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/embarrassed_smile.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/envelope.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/envelope.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/heart.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/heart.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/kiss.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/kiss.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/lightbulb.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/lightbulb.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/omg_smile.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/omg_smile.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/regular_smile.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/regular_smile.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/sad_smile.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/sad_smile.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/shades_smile.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/shades_smile.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/teeth_smile.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/teeth_smile.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/thumbs_down.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/thumbs_down.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/thumbs_up.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/thumbs_up.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/tongue_smile.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/tongue_smile.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/tounge_smile.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/whatchutalkingabout_smile.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/wink_smile.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/smiley/images/wink_smile.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/ar.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/bg.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/ca.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/cs.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/cy.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/de.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/el.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/en.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/eo.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/es.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/et.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/fa.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/fi.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/fr-ca.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/fr.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/gl.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/he.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/hr.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/hu.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/id.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/it.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/ja.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/km.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/ku.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/lv.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/nb.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/nl.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/no.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/pl.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/pt-br.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/pt.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/ru.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/si.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/sk.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/sl.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/sq.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/sv.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/th.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/tr.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/ug.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/uk.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/vi.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/zh-cn.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/zh.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/lang/_translationstatus.txt">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/specialchar/dialogs/specialchar.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/table/dialogs/table.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/tabletools/dialogs/tableCell.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/templates/dialogs/templates.css">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/templates/dialogs/templates.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/templates/templates/default.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/templates/templates/images/template1.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/templates/templates/images/template2.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/templates/templates/images/template3.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/templates/templates/images/templateMeeting.gif">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/video/dialogs/video.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/video/docs/install.html">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/video/docs/styles.css">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/video/images/icon.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/video/images/placeholder.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/video/plugin.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/wsc/dialogs/ciframe.html">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/wsc/dialogs/tmp.html">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/wsc/dialogs/tmpFrameset.html">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/wsc/dialogs/wsc.css">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/wsc/dialogs/wsc.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/wsc/dialogs/wsc_ie.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/wsc/LICENSE.md">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/wsc/README.md">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/youtube/images/icon.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/youtube/lang/ar.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/youtube/lang/de.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/youtube/lang/en.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/youtube/lang/fr.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/youtube/lang/hu.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/youtube/lang/it.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/youtube/lang/ja.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/youtube/lang/nl.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/youtube/lang/pl.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/youtube/lang/pt.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/youtube/lang/ru.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/youtube/lang/tr.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/youtube/lang/vi.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/youtube/LICENSE.md">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/youtube/plugin.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/youtube/README.md">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/_flash/dialogs/flash.js">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/plugins/_flash/images/placeholder.png">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/README.md">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/dialog.css">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/dialog_ie.css">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/dialog_ie7.css">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/dialog_ie8.css">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/dialog_iequirks.css">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/dialog_opera.css">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/editor.css">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/editor_gecko.css">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/editor_ie.css">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/editor_ie7.css">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/editor_ie8.css">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/editor_iequirks.css">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/icons.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/icons_hidpi.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/images/arrow.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/images/close.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/images/hidpi/close.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/images/hidpi/lock-open.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/images/hidpi/lock.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/images/hidpi/refresh.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/images/lock-open.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/images/lock.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/images/refresh.png">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/skins/moono/readme.md">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/Integrated/ckeditor/styles.js">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/scripts/libs/jquery-1.7.1.js">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/scripts/libs/jquery-1.7.1.min.js">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/scripts/libs/jquery-ui-1.12.1.js">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/scripts/libs/jquery.unobtrusive-ajax.js">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/scripts/libs/jquery.validate.js">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/scripts/libs/jquery.validate.min.js">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/scripts/libs/jquery.validate.unobtrusive.js">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/scripts/libs/jquery.validate.unobtrusive.min.js">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/scripts/libs/knockout-2.1.0.debug.js">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/scripts/libs/knockout-2.1.0.js">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/scripts/libs/modernizr-2.5.3.js">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/scripts/libs/platform.js">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Assets/scripts/ui/cms.js">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.pdb">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>02/03/2018 22:50:10</publishTime>
+    </File>
+    <File Include="bin/CMSHelperLib.dll">
+      <publishTime>03/03/2018 13:49:40</publishTime>
+    </File>
+    <File Include="bin/CMSHelperLib.pdb">
+      <publishTime>03/03/2018 13:49:40</publishTime>
+    </File>
+    <File Include="bin/CMSLib.dll">
+      <publishTime>03/03/2018 13:49:42</publishTime>
+    </File>
+    <File Include="bin/CMSLib.pdb">
+      <publishTime>03/03/2018 13:49:42</publishTime>
+    </File>
+    <File Include="bin/CMSViewLib.dll">
+      <publishTime>03/03/2018 13:49:43</publishTime>
+    </File>
+    <File Include="bin/CMSViewLib.pdb">
+      <publishTime>03/03/2018 13:49:43</publishTime>
+    </File>
+    <File Include="bin/hCMS.dll">
+      <publishTime>03/03/2018 18:19:25</publishTime>
+    </File>
+    <File Include="bin/hCMS.pdb">
+      <publishTime>03/03/2018 18:19:25</publishTime>
+    </File>
+    <File Include="bin/LibDatabase.dll">
+      <publishTime>03/03/2018 13:49:40</publishTime>
+    </File>
+    <File Include="bin/LibDatabase.pdb">
+      <publishTime>03/03/2018 13:49:40</publishTime>
+    </File>
+    <File Include="bin/LibUtils.dll">
+      <publishTime>03/03/2018 13:49:41</publishTime>
+    </File>
+    <File Include="bin/LibUtils.pdb">
+      <publishTime>03/03/2018 13:49:41</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe.config">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.rsp">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.exe.config">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/csi.rsp">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.Scripting.dll">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.Scripting.dll">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.amd64.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.DiaSymReader.Native.x86.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Win32.Primitives.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.AppContext.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Console.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.FileVersionInfo.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.Process.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Diagnostics.StackTrace.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Compression.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.DriveInfo.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.FileSystem.Primitives.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.IO.Pipes.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.AccessControl.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Claims.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Algorithms.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Encoding.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.Primitives.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Cryptography.X509Certificates.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Security.Principal.Windows.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Text.Encoding.CodePages.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Threading.Thread.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.ValueTuple.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.ReaderWriter.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XmlDocument.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Xml.XPath.XDocument.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe.config">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.rsp">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>02/03/2018 22:50:13</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>02/03/2018 22:50:12</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/Actions/ActionRoles.cshtml">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/Actions/Edit.cshtml">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/Actions/Index.cshtml">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/Countries/Index.cshtml">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/Error/AccessDenied.cshtml">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/Error/Error404.cshtml">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/Error/Index.cshtml">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/Roles/Edit.cshtml">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/Roles/Index.cshtml">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/Roles/RoleActions.cshtml">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/Shared/PartialHeader.cshtml">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/Shared/PartialPagination.cshtml">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/Users/Edit.cshtml">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/Users/Index.cshtml">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/Users/Login.cshtml">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/03/2018 18:14:33</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

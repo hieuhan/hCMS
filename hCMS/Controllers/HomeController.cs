@@ -6,9 +6,11 @@ using System.Web.Mvc;
 using CMSHelperLib;
 using CMSLib;
 using hCMS.Library;
+using LibUtils;
 
 namespace hCMS.Controllers
 {
+    [CmsAuthorize]
     public class HomeController : Controller
     {
         public ActionResult Index()

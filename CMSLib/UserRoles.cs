@@ -182,7 +182,7 @@ namespace CMSLib
             {
                 SqlCommand sqlCommand =
                     new SqlCommand("UserRoles_Insert_Quick") { CommandType = CommandType.StoredProcedure };
-                sqlCommand.Parameters.Add(new SqlParameter("@CrUserId", actUserId));
+                //sqlCommand.Parameters.Add(new SqlParameter("@CrUserId", actUserId));
                 sqlCommand.Parameters.Add(new SqlParameter("@RoleId", this.RoleId));
                 sqlCommand.Parameters.Add(new SqlParameter("@UserId", this.UserId));
                 sqlCommand.Parameters.Add("@UserRoleId", SqlDbType.Int).Direction = ParameterDirection.Output;
@@ -267,7 +267,7 @@ namespace CMSLib
 
         public List<UserRoles> GetListByUserId(int userId)
         {
-            string cmdText = "SELECT * FROM V$UserRoles WHERE (UserId = " + userId + ")";
+            string cmdText = "SELECT * FROM UserRoles WHERE (UserId = " + userId + ")";
             SqlCommand sqlCommand = new SqlCommand(cmdText) { CommandType = CommandType.Text };
             try
             {

@@ -1,0 +1,79 @@
+﻿@using hCMS.Library
+@model hCMS.Models.PaginationModel
+@{
+    int start = 1;
+    int pageCount = (int)Math.Ceiling(Model.TotalPage / (double)Model.PageSize);
+    int end = pageCount;
+    if (pageCount > Model.LinkLimit)
+    {
+        var middle = (int)Math.Ceiling(Model.LinkLimit / 2d) - 1;
+        var below = Model.PageIndex - middle;
+        var above = Model.PageIndex + middle;
+        if (below < 2)
+        {
+            above = Model.LinkLimit;
+            below = 1;
+        }
+        else if (above > (pageCount - 2))
+        {
+            above = pageCount;
+            below = pageCount - Model.LinkLimit + 1;
+        }
+        start = below;
+        end = above;
+    }
+}
+<div>
+    @if (Model.TotalPage > 0)
+    {
+        <div class="w3-pagination w3-left">
+            <p class="w3-tag w3-teal w3-round">
+                Trang: @Model.PageIndex/@pageCount
+            </p>
+        </div>
+    }
+    <div class="pagination w3-right w3-padding-top">
+        @if (Model.PageIndex > 1)
+        {
+            <a href="@CmsExtensions.GetLinkPage(Model.PageIndex - 1)">&laquo;</a>
+        }
+        @if (start > 1)
+        {
+            <a href="@CmsExtensions.GetLinkPage(1)">1</a>
+            if (start > 3)
+            {
+                <a href="@CmsExtensions.GetLinkPage(2)">2</a>
+            }
+            if (start > 2)
+            {
+                <a class="pagination">...</a>
+            }
+        }
+        @for (int index = start; index <= end; index++)
+        {
+            if (index == Model.PageIndex)
+            {
+                <span class="pagination active">@Model.PageIndex</span>
+            }
+            else
+            {
+                <a href="@CmsExtensions.GetLinkPage(index)">@index</a>
+            }
+        }
+        @if (end < pageCount)
+        {
+            if (end < pageCount - 1)
+            {
+                <span class="pagination">...</span>
+            }
+            if (end < pageCount - 2)
+            {
+                <a href="@CmsExtensions.GetLinkPage(pageCount)">@pageCount</a>
+            }
+        }
+        @if (Model.PageIndex < pageCount)
+        {
+            <a href="@CmsExtensions.GetLinkPage(Model.PageIndex + 1)">&raquo;</a>
+        }
+    </div>
+</div>

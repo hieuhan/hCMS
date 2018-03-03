@@ -1,0 +1,29 @@
+Log Time : 03-03-2018 01:58:26
+Log Level : ERROR
+UserName : admin
+ControllerName : Users
+ActionName : Index
+----------------------------------------------------------------------------------------------------------
+Source:	.Net SqlClient Data Provider
+Target:	System.Collections.Generic.List`1[CMSLib.Users] GetPage(System.String, System.String, System.String, System.String, System.String, Byte, Byte, Byte, System.String, System.String, System.String, Int32, Int32, Int32 ByRef)
+Type:	SqlException
+Message:	Could not find stored procedure 'Users_GetPage'.
+Stack:	   at CMSLib.Users.GetPage(String userName, String fullName, String address, String email, String mobile, Byte genderId, Byte userStatusId, Byte userTypeId, String dateFrom, String dateTo, String orderBy, Int32 pageSize, Int32 pageIndex, Int32& rowCount) in D:\hieuhan\hCMS\CMSLib\Users.cs:line 768
+   at hCMS.Controllers.UsersController.Index(Byte userTypeId, Byte userStatusId, String userName, Int32 page) in D:\hieuhan\hCMS\hCMS\Controllers\UsersController.cs:line 92
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+==========================================================================================================

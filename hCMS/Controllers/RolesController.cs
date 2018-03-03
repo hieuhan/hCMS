@@ -2,6 +2,7 @@
 using CMSHelperLib;
 using CMSLib;
 using hCMS.Library;
+using hCMS.Models;
 using hCMS.Models.Roles;
 
 namespace hCMS.Controllers
@@ -42,6 +43,8 @@ namespace hCMS.Controllers
             if (ModelState.IsValid)
             {
                 short systemMessageId = 0;
+                byte sysMessageTypeId = 0;
+                model.SystemStatus = SystemStatus.Error;
                 var role = new Roles
                 {
                     RoleId = model.RoleId,
@@ -49,20 +52,17 @@ namespace hCMS.Controllers
                     RoleDesc = model.RoleDesc,
                     BuildIn = 0
                 };
-                if (model.RoleId > 0)
-                {
-                    role.Update(_userId, ref systemMessageId);
-                }
-                else
-                {
-                    role.Insert(_userId, ref systemMessageId);
-                }
+                sysMessageTypeId = model.RoleId > 0 ? role.Update(_userId, ref systemMessageId) : role.Insert(_userId, ref systemMessageId);
                 if (systemMessageId > 0)
                 {
                     var sysMessage = new SystemMessages().Get(systemMessageId);
-                    ModelState.AddModelError(string.Empty, sysMessage.SystemMessageDesc);
+                    if (sysMessageTypeId == CmsConstants.SystemMessageIdSuccess)
+                    {
+                        model.SystemStatus = SystemStatus.Success;
+                    }
+                    ModelState.AddModelError("SystemMessages", sysMessage.SystemMessageDesc);
                 }
-                else ModelState.AddModelError(string.Empty, "Bạn vui lòng thử lại sau.");
+                else ModelState.AddModelError("SystemMessages", "Bạn vui lòng thử lại sau.");
             }
             return View(model);
         }
@@ -121,8 +121,20 @@ namespace hCMS.Controllers
                 }
             }
             model.ListActionsByRole = new Actions().GetActionsByRole(model.RoleId);
-            ModelState.AddModelError(string.Empty, "Gán chức năng cho quyền thành công !");
+            model.SystemStatus = SystemStatus.Success;
+            ModelState.AddModelError("SystemMessages", "Gán chức năng cho quyền thành công !");
             return View(model);
+        }
+
+        [HttpGet]
+        public ActionResult Delete(short roleId = 0)
+        {
+            short sysMessageId = 0;
+            if (roleId > 0)
+            {
+                new Roles { RoleId = roleId }.Delete(0, ref sysMessageId);
+            }
+            return Redirect("/Roles/Index");
         }
     }
 }

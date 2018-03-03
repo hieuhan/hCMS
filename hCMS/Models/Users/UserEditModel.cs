@@ -8,7 +8,7 @@ using hCMS.Library;
 
 namespace hCMS.Models.Users
 {
-    public class UserEditModel
+    public class UserEditModel:ViewModelBase
     {
         private List<UserStatus> _listUserStatus;
         private List<UserTypes> _listUserTypes;
@@ -24,11 +24,11 @@ namespace hCMS.Models.Users
             "{0} không bao gồm khoảng trắng, chỉ bao gồm chữ cái thường và số.")]
         public string UserName { get; set; }
 
-        [Display(Name = "Mật khẩu")]
-        [StringLength(100, ErrorMessage = "Mật khẩu bao gồm 6 ký tự trở lên.", MinimumLength = 6)]
-        [Required(ErrorMessage = "Vui lòng nhập {0} (*)")]
-        [DataType(DataType.Password)]
-        public string Password { get; set; }
+        //[Display(Name = "Mật khẩu")]
+        //[StringLength(100, ErrorMessage = "Mật khẩu bao gồm 6 ký tự trở lên.", MinimumLength = 6)]
+        //[Required(ErrorMessage = "Vui lòng nhập {0} (*)")]
+        //[DataType(DataType.Password)]
+        //public string Password { get; set; }
 
         public string FullName { get; set; }
 
