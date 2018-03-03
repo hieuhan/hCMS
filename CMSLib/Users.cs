@@ -823,7 +823,7 @@ namespace CMSLib
             List<Users> list = new List<Users>();
             try
             {
-                string cmdText = "SELECT * FROM V$UsersAll";
+                string cmdText = "SELECT * FROM Users";
                 SqlCommand sqlCommand = new SqlCommand(cmdText) { CommandType = CommandType.Text };
                 list = this.Init(sqlCommand);
             }
@@ -1057,6 +1057,15 @@ namespace CMSLib
             {
                 throw ex;
             }
+        }
+
+        public static Users Static_Get(int UserId, List<Users> l_Users)
+        {
+            Users RetVal;
+            RetVal = l_Users.Find(x => x.UserId == UserId);
+            if (RetVal == null)
+                RetVal = new Users();
+            return RetVal;
         }
     }
 }

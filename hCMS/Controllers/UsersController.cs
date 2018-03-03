@@ -437,17 +437,43 @@ namespace hCMS.Controllers
             return View(model);
         }
 
-        //[CmsAuthorize]
-        //public ActionResult UserSites(int userId)
-        //{
-        //    var model = new UserSitesModel
-        //    {
-        //        UserId = userId,
-        //        ListSites = Sites.Static_GetList(0),
-        //        ListUserSites = new UserSites().GetByUser(userId)
-        //    };
-        //    return View(model);
-        //}
+        [CmsAuthorize]
+        public ActionResult UserSites(int userId)
+        {
+            var model = new UserSitesModel
+            {
+                UserId = userId,
+                ListSites = Sites.Static_GetList(0),
+                ListUserSites = new UserSites().GetByUser(userId)
+            };
+            return View(model);
+        }
+
+        [HttpPost]
+        [CmsAuthorize]
+        [ValidateAntiForgeryToken]
+        public ActionResult UserSites(UserSitesModel model)
+        {
+            short sysMessageId = 0;
+            var userSite = new UserSites
+            {
+                UserId = model.UserId
+            };
+            userSite.DeleteByUserId(0, _userId, ref sysMessageId);
+            if (model.SitesId != null && model.SitesId.Length > 0)
+            {
+                foreach (var siteId in model.SitesId)
+                {
+                    userSite.SiteId = siteId;
+                    userSite.Insert(1, _userId, ref sysMessageId);
+                }
+            }
+            model.ListSites = Sites.Static_GetList(0);
+            model.ListUserSites = new UserSites().GetByUser(model.UserId);
+            model.SystemStatus = SystemStatus.Success;
+            ModelState.AddModelError("SystemMessages", "Gán Site cho User thành công !");
+            return View(model);
+        }
 
     }
 }

@@ -10,7 +10,6 @@ using LibUtils;
 
 namespace hCMS.Controllers
 {
-    [CmsAuthorize]
     public class HomeController : Controller
     {
         public ActionResult Index()

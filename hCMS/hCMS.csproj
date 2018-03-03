@@ -149,10 +149,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ActionsController.cs" />
     <Compile Include="Controllers\CountriesController.cs" />
+    <Compile Include="Controllers\DataSourcesController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Controllers\SharedController.cs" />
+    <Compile Include="Controllers\SitesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -160,10 +162,13 @@
     <Compile Include="Models\Actions\ActionEditModel.cs" />
     <Compile Include="Models\Actions\ActionRolesModel.cs" />
     <Compile Include="Models\Actions\ActionsModel.cs" />
+    <Compile Include="Models\DataSources\DataSourcesModel.cs" />
     <Compile Include="Models\PaginationModel.cs" />
     <Compile Include="Models\Roles\RoleActionsModel.cs" />
     <Compile Include="Models\Roles\RolesModel.cs" />
     <Compile Include="Models\Shared\HeaderModel.cs" />
+    <Compile Include="Models\Sites\SitesEditModel.cs" />
+    <Compile Include="Models\Sites\SitesModel.cs" />
     <Compile Include="Models\Users\ChangePasswordModel.cs" />
     <Compile Include="Models\Users\UserActionsModel.cs" />
     <Compile Include="Models\Users\UserCreateModel.cs" />
@@ -171,6 +176,7 @@
     <Compile Include="Models\Users\UserLoginModel.cs" />
     <Compile Include="Models\Users\UserProfileModel.cs" />
     <Compile Include="Models\Users\UserRolesModel.cs" />
+    <Compile Include="Models\Users\UserSitesModel.cs" />
     <Compile Include="Models\Users\UsersModel.cs" />
     <Compile Include="Models\ViewModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -879,6 +885,10 @@
     <Content Include="Views\Users\Create.cshtml" />
     <Content Include="Views\Users\UserRoles.cshtml" />
     <Content Include="Views\Users\UserActions.cshtml" />
+    <Content Include="Views\Sites\Index.cshtml" />
+    <Content Include="Views\Sites\Edit.cshtml" />
+    <Content Include="Views\Users\UserSites.cshtml" />
+    <Content Include="Views\DataSources\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
