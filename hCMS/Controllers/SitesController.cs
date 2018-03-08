@@ -116,14 +116,14 @@ namespace hCMS.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult MultipleAction(SitesModel model)
+        public ActionResult MultipleAction(SiteMultipleActionModel model)
         {
             if (model.Delete != null)
             {
-                if (model.SitesId != null && model.SitesId.Length > 0)
+                if (model.SiteIds != null && model.SiteIds.Length > 0)
                 {
                     short sysMessageId = 0;
-                    foreach (var siteId in model.SitesId)
+                    foreach (var siteId in model.SiteIds)
                     {
                         new Sites { SiteId = siteId }.Delete(0, 0, ref sysMessageId);
                     }

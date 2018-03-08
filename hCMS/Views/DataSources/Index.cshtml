@@ -1,7 +1,7 @@
-﻿@using hCMS.Library
+﻿@using CMSLib
+@using hCMS.Library
 @model hCMS.Models.DataSources.DataSourcesModel
 @{
-    ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -11,7 +11,7 @@
         $(document).ready(function () {
             $('a.popup').on('click',
                 function (e) {
-                    var page = $(this).attr("href")
+                    var page = $(this).attr("href");
                     var cdialog = $('<div id="divEdit" style="overflow:hidden;"></div>')
                         .html('<iframe id="ifEdit" style="border: 0px;" src="' +
                         page +
@@ -22,9 +22,10 @@
                             height: 500,
                             width: 650,
                             title: $(this).attr("title"),
+                            closeText: 'Đóng',
                             close: function (event, ui) {
                                 $(this).remove();
-                                window.location = '/datasources/search/1';
+                                window.location = cms.virtualPath('/DataSources/Index');
                             }
                         });
                     cdialog.dialog('open');
@@ -32,28 +33,62 @@
                 });
         });
     </script>
-
     <div class="w3-row w3-padding-bottom">
         <div class="w3-col s1 w3-padding-top">
-            <label class="w3-label">Kiểu dữ liệu:</label>
+            <label class="w3-label">Từ khóa:</label>
+        </div>
+        <div class="w3-col s3">
+            @Html.TextBoxFor(m => m.DataSourceName, new { @class = "w3-input w3-round w3-border w3-padding-small" })
+        </div>
+
+        <div class="w3-col s1 w3-padding-top w3-padding-left">
+            <label class="w3-label">Loại dữ liệu:</label>
         </div>
         <div class="w3-col s3">
             @Html.DropDownListFor(m => m.DataTypeId, new SelectList(Model.ListDataTypes, "DataTypeId", "DataTypeDesc", Model.DataTypeId).AddDefaultOption("...", "0"), new { @class = "w3-input w3-border w3-padding-small", onchange = "this.form.submit()" })
         </div>
-        <div class="w3-col s1 w3-padding-left">
-            <button class="w3-btn w3-round w3-light-grey w3-border" type="submit"><i class="fa fa-search"></i> Tìm kiếm</button>
+    </div>
+    
+    <div class="w3-row w3-padding-bottom">
+        <div class="w3-col s1 w3-padding-top">
+            <label class="w3-label">Từ ngày:</label>
+        </div>
+        <div class="w3-col s3">
+            <div class="w3-col s5">
+                @Html.TextBoxFor(m => m.DateFrom, new { @class = "w3-input w3-round w3-border w3-padding-small datepicker" })
+            </div>
+            <div class="w3-col s2 w3-padding-top w3-padding-left">
+                <label class="w3-label">Đến:</label>
+            </div>
+            <div class="w3-col s5">
+                @Html.TextBoxFor(m => m.DateTo, new { @class = "w3-input w3-round w3-border w3-padding-small datepicker" })
+            </div>
+        </div>
+        <div class="w3-col s1 w3-padding-top w3-padding-left">
+            <label class="w3-label">Sắp xếp:</label>
+        </div>
+        <div class="w3-col s3">
+            @Html.DropDownListFor(m => m.OrderBy, new SelectList(Model.ListOrderByClauses, "OrderBy", "OrderByDesc", Model.OrderBy), new { @class = "w3-input w3-border w3-padding-small", onchange = "this.form.submit()" })
+        </div>
+        <div class="w3-col s2 w3-padding-left">
+            <button class="w3-btn w3-round w3-light-grey w3-border w3-padding-small" type="submit">
+                <i class="fa fa-search"></i> Tìm kiếm
+            </button>
         </div>
     </div>
     <hr style="margin: 5px 0 5px">
 }
-<form action="/datasources/change_multi" method="post">
+@using (Html.BeginForm("MultipleAction", "DataSources", FormMethod.Post, null))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(false, "", new { @class = "text-danger w3-center" })
     <div>
         <div class="w3-padding-top w3-left">
             <b>Tổng cộng: @Model.RowCount</b>
         </div>
         <div class="w3-padding-bottom w3-right">
-            <a href="/datasources/new" class="w3-btn w3-round w3-border w3-light-grey w3-hover-orange popup" title="Tạo mới"><i class="fa fa-plus"></i> Thêm mới</a>
-            <button class="w3-btn w3-round w3-light-grey w3-border w3-hover-orange" name="delete" value="delete" type="submit">
+            <a href="@(CmsConstants.ROOT_PATH)Datasources/Edit" class="w3-btn w3-round w3-border w3-light-grey w3-hover-orange popup" title="Tạo mới"><i class="fa fa-plus"></i> Thêm mới</a>
+            <button class="w3-btn w3-round w3-light-grey w3-border w3-hover-orange" name="delete" onclick="return confirm('Bạn muốn xóa dữ liệu này?');" value="delete" type="submit">
                 <i class="fa fa-trash"></i> Xóa
             </button>
         </div>
@@ -67,7 +102,7 @@
                     <th class="w3-border">Mô tả</th>
                     <th class="w3-border w3-center">Kiểu dữ liệu</th>
                     <th class="w3-border w3-center">Người tạo</th>
-                    <th class="w3-border w3-center" style="width:120px">Thời gian</th>
+                    <th class="w3-border w3-center" style="width: 120px">Thời gian</th>
                     <th class="w3-border w3-center">Thao tác</th>
                     <th class="w3-border w3-center"><input id="selectall" type="checkbox"></th>
                 </tr>
@@ -83,21 +118,28 @@
                             <td class="w3-border w3-center">@number</td>
                             <td class="w3-border">@dataSource.DataSourceName</td>
                             <td class="w3-border">@dataSource.DataSourceDesc</td>
-                            <td class="w3-border w3-center">Bài viết</td>
-                            <td class="w3-border w3-center">admin</td>
-                            <td class="w3-border w3-center w3-small">27/04/2016 14:37</td>
-                            <td class="w3-border w3-center"><a href="/datasources/edit/6" class="fa fa-pencil-square-o w3-xlarge w3-text-blue w3-hover-text-orange popup" title="Sửa thông tin"></a> <a href="/datasources/delete/6" class="fa fa-trash w3-xlarge w3-text-blue w3-hover-text-orange" onclick="return confirm('Bạn muốn xóa dữ liệu này?');" title="Xóa dữ liệu"></a> </td>
-                            <td class="w3-border w3-center"><input class="checkall" type="checkbox" name="chk[]" value="6"></td>
+                            <td class="w3-border w3-center">@DataTypes.Static_Get(dataSource.DataTypeId,Model.ListDataTypes).DataTypeDesc</td>
+                            <td class="w3-border w3-center">@Users.Static_Get(dataSource.CrUserId,Model.ListUsers).UserName</td>
+                            <td class="w3-border w3-center w3-small">@dataSource.CrDateTime.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td class="w3-border w3-center"><a href="@(CmsConstants.ROOT_PATH)Datasources/Edit?dataSourceId=@dataSource.DataSourceId" class="fa fa-pencil-square-o w3-xlarge w3-text-blue w3-hover-text-orange popup" title="Sửa thông tin"></a> <a href="@(CmsConstants.ROOT_PATH)Datasources/Delete?dataSourceId=@dataSource.DataSourceId" class="fa fa-trash w3-xlarge w3-text-blue w3-hover-text-orange" onclick="return confirm('Bạn muốn xóa dữ liệu này?');" title="Xóa dữ liệu"></a> </td>
+                            <td class="w3-border w3-center"><input class="checkall w3-check" type="checkbox" name="DataSourceIds[]" value="@dataSource.DataSourceId"></td>
                         </tr>
                     }
                 }
             </tbody>
         </table>
     </div>
-    @{
-    Html.RenderAction("PartialPagination", "Shared", new { model = Model.Pagination });
+    {
+        Html.RenderAction("PartialPagination", "Shared", new { model = Model.Pagination });
     }
-</form>
-
+}
+@section menudieuhuong{
+    <div class="menudieuhuong">
+        <div class="menudieuhuong_conen">
+            <img src="@Url.Content("~/assets/images/muitendieuhuong.png")" />
+            <b>Danh sách nguồn dữ liệu</b>
+        </div>
+    </div>
+}
 
 

@@ -322,7 +322,6 @@ namespace CMSLib
             }
             return retVal;
         }
-        //--------------------------------------------------------------     
         //-------------------------------------------------------------- 
         public DataSet Provinces_GetNameByJson(string name, int rowAmount, ref string result)
         {
@@ -343,6 +342,47 @@ namespace CMSLib
                 throw ex;
             }
             return retVal;
+        }
+
+        //-------------------------------------------------------------- 
+
+        public List<Provinces> GetPage(string DateFrom, string DateTo, string OrderBy, int PageSize, int PageNumber, ref int RowCount)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Provinces_GetPage");
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(new SqlParameter("@ProvinceId", this.ProvinceId));
+                cmd.Parameters.Add(new SqlParameter("@ProvinceName", this.ProvinceName));
+                cmd.Parameters.Add(new SqlParameter("@ProvinceDesc", this.ProvinceDesc));
+                cmd.Parameters.Add(new SqlParameter("@CountryId", this.CountryId));
+                cmd.Parameters.Add(new SqlParameter("@DisplayOrder", this.DisplayOrder));
+                cmd.Parameters.Add(new SqlParameter("@CrUserId", this.CrUserId));
+                cmd.Parameters.Add(new SqlParameter("@DateFrom", DateFrom));
+                cmd.Parameters.Add(new SqlParameter("@DateTo", DateTo));
+                cmd.Parameters.Add(new SqlParameter("@OrderBy", OrderBy));
+                cmd.Parameters.Add(new SqlParameter("@PageSize", PageSize));
+                cmd.Parameters.Add(new SqlParameter("@PageNumber", PageNumber));
+                cmd.Parameters.Add("@RowCount", SqlDbType.Int).Direction = ParameterDirection.Output;
+                List<Provinces> list = Init(cmd);
+                RowCount = int.Parse(cmd.Parameters["@RowCount"].Value.ToString());
+                return list;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        //--------------------------------------------------------------
+        public static string Static_GetDisplayString(short ProvinceId)
+        {
+            string RetVal = "";
+            Provinces m_Provinces = new Provinces();
+            m_Provinces.ProvinceId = ProvinceId;
+            m_Provinces = m_Provinces.Get();
+            RetVal = m_Provinces.ProvinceName;
+            return RetVal;
         }
 
     }

@@ -31,7 +31,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,13 +44,20 @@
   <ItemGroup>
     <Compile Include="Actions.cs" />
     <Compile Include="ActionStatus.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Countries.cs" />
     <Compile Include="DataSources.cs" />
     <Compile Include="DataTypes.cs" />
     <Compile Include="Genders.cs" />
+    <Compile Include="MediaGroups.cs" />
+    <Compile Include="Medias.cs" />
+    <Compile Include="MediaTypes.cs" />
+    <Compile Include="OrderByClauses.cs" />
     <Compile Include="Provinces.cs" />
     <Compile Include="RoleActions.cs" />
     <Compile Include="Roles.cs" />
     <Compile Include="Sites.cs" />
+    <Compile Include="Status.cs" />
     <Compile Include="SystemErrors.cs" />
     <Compile Include="SystemMessages.cs" />
     <Compile Include="UserActions.cs" />

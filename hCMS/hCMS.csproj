@@ -139,6 +139,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppCode\AjaxResult.cs" />
     <Compile Include="AppCode\Attribute\CmsHandleErrorAttribute.cs" />
     <Compile Include="AppCode\Attribute\CmsLogExceptionFilter.cs" />
     <Compile Include="AppCode\CmsConstants.cs" />
@@ -148,10 +149,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ActionsController.cs" />
+    <Compile Include="Controllers\AjaxController.cs" />
     <Compile Include="Controllers\CountriesController.cs" />
     <Compile Include="Controllers\DataSourcesController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MediaGroupsController.cs" />
+    <Compile Include="Controllers\MediasController.cs" />
+    <Compile Include="Controllers\ProvincesController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Controllers\SharedController.cs" />
     <Compile Include="Controllers\SitesController.cs" />
@@ -162,11 +167,23 @@
     <Compile Include="Models\Actions\ActionEditModel.cs" />
     <Compile Include="Models\Actions\ActionRolesModel.cs" />
     <Compile Include="Models\Actions\ActionsModel.cs" />
+    <Compile Include="Models\Countries\CountriesEditModel.cs" />
+    <Compile Include="Models\Countries\CountriesModel.cs" />
+    <Compile Include="Models\Countries\CountriesMultipleActionModel.cs" />
+    <Compile Include="Models\DataSources\DataSourceMultipleActionModel.cs" />
+    <Compile Include="Models\DataSources\DataSourcesEditModel.cs" />
     <Compile Include="Models\DataSources\DataSourcesModel.cs" />
+    <Compile Include="Models\MediaGroups\MediaGroupMultipleActionModel.cs" />
+    <Compile Include="Models\MediaGroups\MediaGroupsEditModel.cs" />
+    <Compile Include="Models\MediaGroups\MediaGroupsModel.cs" />
+    <Compile Include="Models\MediasModel.cs" />
     <Compile Include="Models\PaginationModel.cs" />
+    <Compile Include="Models\Provinces\ProvincesModel.cs" />
     <Compile Include="Models\Roles\RoleActionsModel.cs" />
     <Compile Include="Models\Roles\RolesModel.cs" />
+    <Compile Include="Models\Roles\RolesMultipleActionModel.cs" />
     <Compile Include="Models\Shared\HeaderModel.cs" />
+    <Compile Include="Models\Sites\SiteMultipleActionModel.cs" />
     <Compile Include="Models\Sites\SitesEditModel.cs" />
     <Compile Include="Models\Sites\SitesModel.cs" />
     <Compile Include="Models\Users\ChangePasswordModel.cs" />
@@ -174,6 +191,7 @@
     <Compile Include="Models\Users\UserCreateModel.cs" />
     <Compile Include="Models\Users\UserEditModel.cs" />
     <Compile Include="Models\Users\UserLoginModel.cs" />
+    <Compile Include="Models\Users\UserMultipleActionModel.cs" />
     <Compile Include="Models\Users\UserProfileModel.cs" />
     <Compile Include="Models\Users\UserRolesModel.cs" />
     <Compile Include="Models\Users\UserSitesModel.cs" />
@@ -889,9 +907,18 @@
     <Content Include="Views\Sites\Edit.cshtml" />
     <Content Include="Views\Users\UserSites.cshtml" />
     <Content Include="Views\DataSources\Index.cshtml" />
+    <Content Include="Views\DataSources\Edit.cshtml" />
+    <Content Include="Views\Countries\Edit.cshtml" />
+    <Content Include="Views\MediaGroups\Index.cshtml" />
+    <Content Include="Views\MediaGroups\Edit.cshtml" />
+    <Content Include="Views\Medias\Index.cshtml" />
+    <Content Include="Views\Medias\Edit.cshtml" />
+    <Content Include="Views\Medias\Select.cshtml" />
+    <Content Include="Views\Provinces\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Ajax\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\fonts\fontawesome-webfont.eot" />

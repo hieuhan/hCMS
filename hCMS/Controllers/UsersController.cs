@@ -239,14 +239,14 @@ namespace hCMS.Controllers
         [HttpPost]
         [CmsAuthorize]
         [ValidateAntiForgeryToken]
-        public ActionResult MultipleAction(UsersModel model)
+        public ActionResult MultipleAction(UserMultipleActionModel model)
         {
             if (model.Delete != null)
             {
-                if (model.UsersId != null && model.UsersId.Length > 0)
+                if (model.UserIds != null && model.UserIds.Length > 0)
                 {
                     short sysMessageId = 0;
-                    foreach (var userId in model.UsersId)
+                    foreach (var userId in model.UserIds)
                     {
                         new Users { UserId = userId }.Delete(0, ref sysMessageId);
                     }

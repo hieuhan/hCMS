@@ -1,0 +1,182 @@
+﻿@using CMSHelperLib
+@using CMSLib
+@using hCMS.Library
+@model hCMS.Models.MediasModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm())
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('a.popup').on('click',
+                function (e) {
+                    var page = $(this).attr("href");
+                    var cdialog = $('<div id="divEdit" style="overflow:hidden;"></div>')
+                        .html('<iframe id="ifEdit" style="border: 0px;" src="' +
+                        page +
+                        '" width="100%" height="100%" scrolling="yes"></iframe>')
+                        .dialog({
+                            autoOpen: false,
+                            modal: true,
+                            height: 500,
+                            width: 650,
+                            title: $(this).attr("title"),
+                            closeText: 'Đóng',
+                            close: function (event, ui) {
+                                $(this).remove();
+                                window.location = cms.virtualPath('/Medias/Index');
+                            }
+                        });
+                    cdialog.dialog('open');
+                    e.preventDefault();
+                });
+
+            $('a.popupView').on('click',
+                function (e) {
+                    var page = $(this).attr("href");
+                    var cdialog = $('<div id="divEdit" style="overflow:hidden;"></div>')
+                        .html('<iframe id="ifEdit" style="border: 0px;" src="' +
+                        page +
+                        '" width="100%" height="100%" scrolling="yes"></iframe>')
+                        .dialog({
+                            autoOpen: false,
+                            modal: true,
+                            height: 500,
+                            width: 650,
+                            title: $(this).attr("title"),
+                            closeText: 'Đóng',
+                            close: function (event, ui) {
+                                $(this).remove();
+                            }
+                        });
+                    cdialog.dialog('open');
+                    e.preventDefault();
+                });
+        });
+    </script>
+
+    <div class="w3-row w3-padding-bottom">
+        <div class="w3-col s1 w3-padding-top w3-padding-left">
+            <label class="w3-label">Nhóm Media :</label>
+        </div>
+        <div class="w3-col s2">
+            @Html.DropDownListFor(m => m.MediaGroupId, new SelectList(Model.ListMediaGroups, "MediaGroupId", "MediaGroupDesc", Model.MediaGroupId).AddDefaultOption("...", "0"), new { @class = "w3-input w3-border w3-padding-small", onchange = "this.form.submit()" })
+        </div>
+        <div class="w3-col s1 w3-padding-top w3-padding-left">
+            <label class="w3-label">Loại Media :</label>
+        </div>
+        <div class="w3-col s2">
+            @Html.DropDownListFor(m => m.MediaTypeId, new SelectList(Model.ListDataTypes, "MediaTypeId", "MediaTypeDesc", Model.MediaTypeId).AddDefaultOption("...", "0"), new { @class = "w3-input w3-border w3-padding-small", onchange = "this.form.submit()" })
+        </div>
+        <div class="w3-col s1 w3-padding-top w3-padding-left">
+            <label class="w3-label">Từ khóa :</label>
+        </div>
+        <div class="w3-col s3">
+            @Html.TextBoxFor(m => m.MediaName, new { @class = "w3-input w3-round w3-border w3-padding-small" })
+        </div>
+        <div class="w3-col s2 w3-padding-left">
+            <button class="w3-btn w3-round w3-light-grey w3-border w3-padding-small" type="submit">
+                <i class="fa "></i> Tìm kiếm
+            </button>
+        </div>
+    </div>
+}
+<div class="w3-row w3-padding-bottom">
+    @using (Html.BeginForm("UploadFiles", "Medias", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        <div class="w3-col s1 w3-padding-top w3-padding-left">
+            <label class="w3-label">File :</label>
+        </div>
+        <div class="w3-col s3">
+            <input type="file" name="FileMedias" class="w3-btn w3-round w3-light-grey w3-border w3-padding-small" id="fileToUpload">
+        </div>
+        @Html.HiddenFor(m => m.MediaGroupId)
+        @Html.HiddenFor(m => m.MediaTypeId)
+        <div class="w3-col s1 w3-padding-left">
+            <button class="w3-btn w3-round w3-light-grey w3-border w3-padding-small" type="submit">
+                <i class="fa fa-upload"></i> Upload
+            </button>
+        </div>
+    }
+</div>
+<hr style="margin: 5px 0 5px">
+@using (Html.BeginForm("MultipleAction", "MediaGroups", FormMethod.Post, null))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+    <div>
+        <div class="w3-padding-top w3-left">
+            <b>Tổng cộng: @Model.RowCount</b>
+        </div>
+        <div class="w3-padding-bottom w3-right">
+            <a href="@(CmsConstants.ROOT_PATH)Medias/Edit"
+               class="w3-btn w3-round w3-border w3-light-grey w3-hover-orange popup"
+               title="Tạo mới"><i class="fa fa-plus"></i>Thêm mới</a>
+            <button class="w3-btn w3-round w3-light-grey w3-border w3-hover-orange"
+                    name="delete" value="delete" type="submit">
+                <i class="fa fa-trash"></i> Xóa
+            </button>
+        </div>
+    </div>
+    <div>
+        <table class="w3-table w3-bordered w3-striped w3-border">
+            <thead class="w3-blue">
+                <tr>
+                    <th class="w3-border w3-center">#</th>
+                    <th class="w3-border">Tên</th>
+                    <th class="w3-border w3-center">File</th>
+                    <th class="w3-border w3-center">Tạo bởi</th>
+                    <th class="w3-border w3-center">Thời gian</th>
+                    <th class="w3-border w3-center">Thao tác</th>
+                    <th class="w3-border w3-center">
+                        <input id="selectall"
+                               type="checkbox" class="w3-check">
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.ListMedias.HasValue())
+                {
+                    for (int i = 0; i < Model.ListMedias.Count; i++)
+                    {
+                        var media = Model.ListMedias[i];
+                        int number = i + (Model.Pagination.PageIndex > 0 ? Model.Pagination.PageIndex - 1 : Model.Pagination.PageIndex) * Model.Pagination.PageSize + 1;
+                        <tr>
+                            <td class="w3-border w3-center">@(number)</td>
+                            <td class="w3-border">@media.MediaName</td>
+                            <td class="w3-border w3-center">
+                                @if (FileUploadHelpers.IsImageFile(media.FilePath.TrimmedOrDefault(string.Empty)))
+                                {
+                                    <a class="popupView" href="@(string.Concat(!media.FilePath.StartsWith("http://") ? Constants.ROOT_PATH : Constants.WEBSITE_MEDIADOMAIN, media.FilePath))" alt="icon menuitem" title="Xem trước file"><img src="@(string.Concat(!media.FilePath.StartsWith("http://") ? Constants.ROOT_PATH : Constants.WEBSITE_MEDIADOMAIN, media.FilePath.Replace("Original", "Icon")))" style="width: 40px; height: 40px" /></a>
+                                }
+                            </td>
+                            <td class="w3-border w3-center">@Users.Static_Get(media.CrUserId, Model.ListUsers).UserName</td>
+                            <td class="w3-border w3-center  w3-small">@media.CrDateTime.ToString("dd/MM/yyyy HH:mm")</td>
+                            <td class="w3-border w3-center">
+                                <a href="@(CmsConstants.ROOT_PATH)medias/edit?mediaId=@media.MediaId" class="fa fa-pencil-square-o w3-xlarge w3-text-blue w3-hover-text-orange popup" title="Sửa thông tin"></a>
+                                <a href="@(CmsConstants.ROOT_PATH)medias/delete?mediaId=@media.MediaId" class="fa fa-trash w3-xlarge w3-text-blue w3-hover-text-orange" onclick="return confirm('Bạn muốn xóa dữ liệu này?');" title="Xóa dữ liệu"></a>
+                            </td>
+                            <td class="w3-border w3-center">
+                                <input class="checkall w3-check" type='checkbox' name="MediasId" value="@media.MediaId">
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+    {
+        Html.RenderAction("PartialPagination", "Shared", new { model = Model.Pagination });
+    }
+}
+@section menudieuhuong{
+    <div class="menudieuhuong">
+        <div class="menudieuhuong_conen">
+            <img src="@Url.Content("~/assets/images/muitendieuhuong.png")" />
+            <b>Danh sách Media</b>
+        </div>
+    </div>
+}

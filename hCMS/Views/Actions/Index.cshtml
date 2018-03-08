@@ -66,7 +66,7 @@
         <div class="w3-padding-bottom w3-right">
             <a href="@(CmsConstants.ROOT_PATH)Actions/Edit" class="w3-btn w3-round w3-border w3-light-grey w3-hover-orange popup" title="Tạo mới"><i class="fa fa-plus"></i> Thêm mới</a>
             @*<button class="w3-btn w3-round w3-light-grey w3-border w3-hover-orange" name="updateOrder" value="updateOrder" type="submit"><i class="fa fa-floppy-o"></i> Cập nhật thứ tự</button>*@
-            <button class="w3-btn w3-round w3-light-grey w3-border w3-hover-orange" name="delete" value="delete" type="submit"><i class="fa fa-trash"></i> Xóa</button>
+            <button class="w3-btn w3-round w3-light-grey w3-border w3-hover-orange" name="delete" value="delete" onclick="return confirm('Bạn muốn xóa dữ liệu này?');" type="submit"><i class="fa fa-trash"></i> Xóa</button>
         </div>
     </div>
     <div>

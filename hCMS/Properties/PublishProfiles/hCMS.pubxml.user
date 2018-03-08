@@ -2068,22 +2068,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/03/2018 13:49:40</publishTime>
     </File>
     <File Include="bin/CMSLib.dll">
-      <publishTime>03/03/2018 13:49:42</publishTime>
+      <publishTime>03/04/2018 14:24:08</publishTime>
     </File>
     <File Include="bin/CMSLib.pdb">
-      <publishTime>03/03/2018 13:49:42</publishTime>
+      <publishTime>03/04/2018 14:24:08</publishTime>
     </File>
     <File Include="bin/CMSViewLib.dll">
-      <publishTime>03/03/2018 13:49:43</publishTime>
+      <publishTime>03/04/2018 14:24:08</publishTime>
     </File>
     <File Include="bin/CMSViewLib.pdb">
-      <publishTime>03/03/2018 13:49:43</publishTime>
+      <publishTime>03/04/2018 14:24:08</publishTime>
     </File>
     <File Include="bin/hCMS.dll">
-      <publishTime>03/03/2018 18:19:25</publishTime>
+      <publishTime>03/04/2018 14:39:09</publishTime>
     </File>
     <File Include="bin/hCMS.pdb">
-      <publishTime>03/03/2018 18:19:25</publishTime>
+      <publishTime>03/04/2018 14:39:09</publishTime>
     </File>
     <File Include="bin/LibDatabase.dll">
       <publishTime>03/03/2018 13:49:40</publishTime>
@@ -2311,16 +2311,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/03/2018 22:50:11</publishTime>
     </File>
     <File Include="Views/Actions/ActionRoles.cshtml">
-      <publishTime>02/03/2018 22:50:11</publishTime>
+      <publishTime>03/03/2018 21:33:42</publishTime>
     </File>
     <File Include="Views/Actions/Edit.cshtml">
-      <publishTime>02/03/2018 22:50:11</publishTime>
+      <publishTime>03/03/2018 21:28:42</publishTime>
     </File>
     <File Include="Views/Actions/Index.cshtml">
       <publishTime>02/03/2018 22:50:11</publishTime>
     </File>
     <File Include="Views/Countries/Index.cshtml">
       <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/DataSources/Edit.cshtml">
+      <publishTime>03/04/2018 14:16:16</publishTime>
+    </File>
+    <File Include="Views/DataSources/Index.cshtml">
+      <publishTime>03/04/2018 14:38:51</publishTime>
     </File>
     <File Include="Views/Error/AccessDenied.cshtml">
       <publishTime>02/03/2018 22:50:11</publishTime>
@@ -2335,13 +2341,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/03/2018 22:50:11</publishTime>
     </File>
     <File Include="Views/Roles/Edit.cshtml">
-      <publishTime>02/03/2018 22:50:11</publishTime>
+      <publishTime>03/03/2018 22:07:49</publishTime>
     </File>
     <File Include="Views/Roles/Index.cshtml">
       <publishTime>02/03/2018 22:50:11</publishTime>
     </File>
     <File Include="Views/Roles/RoleActions.cshtml">
-      <publishTime>02/03/2018 22:50:11</publishTime>
+      <publishTime>03/03/2018 21:39:24</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>02/03/2018 22:50:11</publishTime>
@@ -2355,14 +2361,38 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Shared/_Layout.cshtml">
       <publishTime>02/03/2018 22:50:11</publishTime>
     </File>
+    <File Include="Views/Sites/Edit.cshtml">
+      <publishTime>03/03/2018 23:53:21</publishTime>
+    </File>
+    <File Include="Views/Sites/Index.cshtml">
+      <publishTime>03/03/2018 23:49:53</publishTime>
+    </File>
+    <File Include="Views/Users/ChangePassword.cshtml">
+      <publishTime>03/03/2018 21:18:44</publishTime>
+    </File>
+    <File Include="Views/Users/Create.cshtml">
+      <publishTime>03/03/2018 22:40:34</publishTime>
+    </File>
     <File Include="Views/Users/Edit.cshtml">
-      <publishTime>02/03/2018 22:50:11</publishTime>
+      <publishTime>03/03/2018 22:35:09</publishTime>
     </File>
     <File Include="Views/Users/Index.cshtml">
-      <publishTime>02/03/2018 22:50:11</publishTime>
+      <publishTime>03/04/2018 00:44:28</publishTime>
     </File>
     <File Include="Views/Users/Login.cshtml">
       <publishTime>02/03/2018 22:50:11</publishTime>
+    </File>
+    <File Include="Views/Users/Profile.cshtml">
+      <publishTime>03/03/2018 21:16:49</publishTime>
+    </File>
+    <File Include="Views/Users/UserActions.cshtml">
+      <publishTime>03/03/2018 23:41:01</publishTime>
+    </File>
+    <File Include="Views/Users/UserRoles.cshtml">
+      <publishTime>03/03/2018 23:17:19</publishTime>
+    </File>
+    <File Include="Views/Users/UserSites.cshtml">
+      <publishTime>03/04/2018 00:33:23</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>02/03/2018 22:50:11</publishTime>

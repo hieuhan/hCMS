@@ -8,29 +8,32 @@
 @using (Html.BeginForm())
 {
     <script type="text/javascript">
-        $(document).ready(function() {
-            $('a.popup').on('click',
-                function(e) {
-                    var page = $(this).attr("href");
-                    var cdialog = $('<div id="divEdit" style="overflow:hidden;"></div>')
-                        .html('<iframe id="ifEdit" style="border: 0px;" src="' +
-                            page +
-                            '" width="100%" height="100%"></iframe>')
-                        .dialog({
-                            autoOpen: false,
-                            modal: true,
-                            height: 650,
-                            width: 650,
-                            title: $(this).attr("title"),
-                            closeText: 'Đóng',
-                            close: function(event, ui) {
-                                $(this).remove();
-                                window.location = cms.virtualPath('/Users/Index');
-                            }
-                        });
-                    cdialog.dialog('open');
-                    e.preventDefault();
+        $(document).ready(function () {
+            $('a.popup').on('click', function (e) {
+                var page = $(this).attr("href");
+                var popup = $('<div id="divEdit" style="overflow:hidden;"><p id="ifLoader" style="float:left;width:100%;text-align:center;"><img src="/assets/images/icons/spinner3-bluey.gif" alt="Đang tải dữ liệu..."/> Đang tải dữ liệu...</p></div>').prependTo('body');
+                popup.prepend('<iframe id="ifEdit" style="border: 0px;display:none;" width="100%" height="100%"></iframe>');
+                var iFrame = $('iframe');
+                iFrame.load(function () {
+                    $('#ifEdit').show();
+                    $('#ifLoader').hide();
                 });
+                $('#ifEdit').attr("src", page);
+                popup.dialog({
+                    autoOpen: false,
+                    modal: true,
+                    height: 650,
+                    width: 650,
+                    title: $(this).attr("title"),
+                    closeText: 'Đóng',
+                    close: function (event, ui) {
+                        $(this).remove();
+                        window.location = cms.virtualPath('/Users/Index');
+                    }
+                });
+                popup.dialog('open');
+                e.preventDefault();
+            });
         });
     </script>
 
@@ -70,7 +73,7 @@
             <b>Tổng cộng: @Model.RowCount</b>
         </div>
         <div class="w3-padding-bottom w3-right">
-            <a href="@(CmsConstants.ROOT_PATH)Users/Edit" class="w3-btn w3-round w3-border w3-light-grey w3-hover-orange popup" title="Tạo mới"><i class="fa fa-plus"></i> Thêm mới</a>
+            <a href="@(CmsConstants.ROOT_PATH)Users/Create" class="w3-btn w3-round w3-border w3-light-grey w3-hover-orange popup" title="Tạo mới"><i class="fa fa-plus"></i> Thêm mới</a>
             <button class="w3-btn w3-round w3-light-grey w3-border w3-hover-orange" name="delete" value="delete" type="submit"><i class="fa fa-trash"></i> Xóa</button>
         </div>
     </div>

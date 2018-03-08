@@ -444,7 +444,7 @@ var cms = {
 
         $('.media-select').off('click').on('click',
             function (event) { 
-                event.preventDefault();
+                event.preventDefault(); 
                 var mediaId = $(this).data('id');
                 $.lawsAjax({
                     url: cms.virtualPath('/Ajax/MediaSelect'),

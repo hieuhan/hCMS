@@ -1,0 +1,29 @@
+Log Time : 05-03-2018 23:24:29
+Log Level : ERROR
+UserName : admin
+ControllerName : Medias
+ActionName : Index
+----------------------------------------------------------------------------------------------------------
+Source:	CMSLib
+Target:	System.Collections.Generic.List`1[CMSLib.Medias] GetPage(Int32, Int32, Int32, System.String, Byte, Int16, System.String, System.String, System.String, Int32 ByRef)
+Type:	ApplicationException
+Message:	Data error: Could not find stored procedure 'Medias_GetPage'.
+Stack:	   at CMSLib.Medias.GetPage(Int32 ActUserId, Int32 RowAmount, Int32 PageIndex, String OrderBy, Byte MediaTypeId, Int16 MediaGroupId, String MediaName, String DateFrom, String DateTo, Int32& RowCount) in D:\hieuhan\hCMS\CMSLib\Medias.cs:line 436
+   at hCMS.Controllers.MediasController.Index(Int16 mediaGroupId, Byte mediaTypeId, String mediaName, Int32 page) in D:\hieuhan\hCMS\hCMS\Controllers\MediasController.cs:line 21
+   at lambda_method(Closure , ControllerBase , Object[] )
+   at System.Web.Mvc.ActionMethodDispatcher.Execute(ControllerBase controller, Object[] parameters)
+   at System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<BeginInvokeSynchronousActionMethod>b__39(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+==========================================================================================================

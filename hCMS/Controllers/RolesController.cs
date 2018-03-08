@@ -69,23 +69,19 @@ namespace hCMS.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult MultipleAction(RoleActionsModel model)
+        public ActionResult MultipleAction(RolesMultipleActionModel model)
         {
             if (model.Delete != null)
             {
-                if (model.RolesId != null && model.RolesId.Length > 0)
+                if (model.RoleIds != null && model.RoleIds.Length > 0)
                 {
                     short systemMessageId = 0;
-                    foreach (var roleId in model.RolesId)
+                    foreach (var roleId in model.RoleIds)
                     {
-                        var role = new Roles
+                        new Roles
                         {
                             RoleId = roleId
-                        };
-                        if (model.Delete != null)
-                        {
-                            role.Delete(0, ref systemMessageId);
-                        }
+                        }.Delete(0, ref systemMessageId);
                     }
                 }
             }

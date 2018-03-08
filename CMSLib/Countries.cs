@@ -383,6 +383,35 @@ namespace CMSLib
             }
             return RetVal;
         }
+        //-------------------------------------------------------------- 
+        public List<Countries> GetPage(string DateFrom, string DateTo, string OrderBy, int PageSize, int PageNumber, ref int RowCount)
+        {
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Countries_GetPage");
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.Add(new SqlParameter("@CountryId", this.CountryId));
+                cmd.Parameters.Add(new SqlParameter("@CountryName", this.CountryName));
+                //cmd.Parameters.Add(new SqlParameter("@CountryDesc", this.CountryDesc));
+                //cmd.Parameters.Add(new SqlParameter("@IconPath", this.IconPath));
+                //cmd.Parameters.Add(new SqlParameter("@DisplayOrder", this.DisplayOrder));
+                cmd.Parameters.Add(new SqlParameter("@CrUserId", this.CrUserId));
+                cmd.Parameters.Add(new SqlParameter("@DateFrom", DateFrom));
+                cmd.Parameters.Add(new SqlParameter("@DateTo", DateTo));
+                cmd.Parameters.Add(new SqlParameter("@OrderBy", OrderBy));
+                cmd.Parameters.Add(new SqlParameter("@PageSize", PageSize));
+                cmd.Parameters.Add(new SqlParameter("@PageNumber", PageNumber));
+                cmd.Parameters.Add("@RowCount", SqlDbType.Int).Direction = ParameterDirection.Output;
+                List<Countries> list = Init(cmd);
+                RowCount = int.Parse(cmd.Parameters["@RowCount"].Value.ToString());
+                return list;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         //--------------------------------------------------------------     
         public static Countries Static_Get(short CountryId, List<Countries> list)
         {

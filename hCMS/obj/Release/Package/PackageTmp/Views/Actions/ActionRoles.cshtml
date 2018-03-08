@@ -1,4 +1,5 @@
 ﻿@using hCMS.Library
+@using hCMS.Models
 @model hCMS.Models.Actions.ActionRolesModel
 
 @{
@@ -17,25 +18,31 @@
     @Scripts.Render("~/bundles/jqueryval")
 </head>
 <body>
-@using (Html.BeginForm("ActionRoles", "Actions", FormMethod.Post, null))
-{
-    @Html.ValidationSummary(false, "", new { @class = "text-danger w3-center" })
-    @Html.AntiForgeryToken()
-    <div class="w3-container" style="height: 390px; overflow: auto">
-        @foreach (CMSLib.Roles role in Model.ListRoles)
-        {
-            if (Model.ListRoles.HasValue())
+    @using (Html.BeginForm("ActionRoles", "Actions", FormMethod.Post, null))
+    {
+        @Html.AntiForgeryToken()
+        <div class="w3-container" style="height: 390px; overflow: auto">
+            @Html.ValidationMessageFor(m => m.SystemMessages, "", new { @class = string.Format("text-danger w3-center w3-container w3-section w3-round w3-padding {0}", Model.SystemStatus == SystemStatus.Success ? "w3-blue" : "w3-red") })
+            @foreach (CMSLib.Roles role in Model.ListRoles)
             {
-                var roleAction = Model.ListRoleActions.RoleActionsGetByRoleId(role.RoleId);
-                <input name="RolesId" id="chkRole_@role.RoleId" value="@role.RoleId" class="w3-check" type="checkbox" @(roleAction != null && roleAction.RoleId > 0 ? "checked" : string.Empty)>
-                <label for="chkRole_@role.RoleId" class="w3-validate">@role.RoleDesc</label><br>
+                if (Model.ListRoles.HasValue())
+                {
+                    if (Model.ListRoleActions.HasValue() && Model.ListRoleActions.Select(e => e).Any(e => e.RoleId == role.RoleId))
+                    {
+                        <input name="RolesId" id="chkRole_@role.RoleId" value="@role.RoleId" class="w3-check" type="checkbox" checked="checked">
+                    }
+                    else
+                    {
+                        <input name="RolesId" id="chkRole_@role.RoleId" value="@role.RoleId" class="w3-check" type="checkbox">
+                    }
+                    <label for="chkRole_@role.RoleId" class="w3-validate">@role.RoleDesc</label><br>
+                }
             }
-        }
-        @Html.HiddenFor(m=>m.ActionId)
-    </div>
-    <div class="w3-center w3-bottom w3-padding-bottom">
-        <button class="w3-btn w3-border w3-round w3-blue" type="submit"><i class="fa fa-floppy-o"></i> <b>Lưu thông tin</b></button>
-    </div>
-}
+            @Html.HiddenFor(m => m.ActionId)
+        </div>
+        <div class="w3-center w3-bottom w3-padding-bottom">
+            <button class="w3-btn w3-border w3-round w3-blue" type="submit"><i class="fa fa-floppy-o"></i> <b>Lưu thông tin</b></button>
+        </div>
+    }
 </body>
 </html>

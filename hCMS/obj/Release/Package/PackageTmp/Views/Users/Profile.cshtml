@@ -1,0 +1,90 @@
+﻿@using hCMS.Library
+@using hCMS.Models
+@model hCMS.Models.Users.UserProfileModel
+@{
+    ViewBag.Title = "ChangePassword";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<div class="w3-container" style="width: 500px; margin: 0 auto;">
+    @Html.ValidationMessageFor(m => m.SystemMessages, "", new { @class = string.Format("text-danger w3-center w3-container w3-section w3-round w3-padding {0}", Model.SystemStatus == SystemStatus.Success ? "w3-blue" : "w3-red") })
+    <p>
+        <label class="w3-label w3-left">Tên truy nhập:</label>
+        @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+        @Html.TextBoxFor(m => m.UserName, new { @class = "w3-input w3-border w3-round w3-padding-small" })
+    </p>
+    <p>
+        <label class="w3-label w3-left">Họ tên:</label>
+        @Html.TextBoxFor(m => m.FullName, new { @class = "w3-input w3-border w3-round w3-padding-small" })
+    </p>
+    <p>
+        <label class="w3-label w3-left">Giới tính:</label>
+        @Html.DropDownListFor(m => m.GenderId, new SelectList(Model.ListGenders, "GenderId", "GenderDesc", Model.GenderId), new { @class = "w3-input w3-border w3-padding-small" })
+    </p>
+    <p>
+        <label class="w3-label w3-left">Ngày sinh:</label>
+        @Html.TextBoxFor(m => m.BirthDay, "{0:dd/MM/yyyy}", new { @class = "w3-input w3-border w3-round w3-padding-small datepicker" })
+    </p>
+    <p>
+        <label class="w3-label w3-left">Email:</label>
+        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+        @Html.TextBoxFor(m => m.Email, new { @class = "w3-input w3-border w3-round w3-padding-small" })
+    </p>
+    <p>
+        <label class="w3-label w3-left">Địa chỉ:</label>
+        @Html.TextBoxFor(m => m.Address, new { @class = "w3-input w3-border w3-round w3-padding-small" })
+    </p>
+    <p>
+        <label class="w3-label w3-left">Mobile:</label>
+        @Html.TextBoxFor(m => m.Mobile, new { @class = "w3-input w3-border w3-round w3-padding-small" })
+    </p>
+    <p>
+        <label class="w3-label w3-left">Loại user:</label>
+        @Html.DropDownListFor(m => m.UserTypeId, new SelectList(Model.ListUserTypes, "UserTypeId", "UserTypeDesc", Model.UserTypeId).AddDefaultOption("...", "0"), new { @class = "w3-input w3-border w3-padding-small" })
+    </p>
+    <p>
+        <label class="w3-label w3-left">Trạng thái:</label>
+        @Html.DropDownListFor(m => m.UserStatusId, new SelectList(Model.ListUserStatus, "UserStatusId", "UserStatusDesc", Model.UserStatusId).AddDefaultOption("...", "0"), new { @class = "w3-input w3-border w3-padding-small" })
+    </p>
+    <p>
+        <label class="w3-label w3-left">Trang mặc định:</label>
+        @Html.DropDownListFor(m => m.DefaultActionId, new SelectList(Model.ListActions, "ActionId", "ActionDesc", Model.DefaultActionId).AddDefaultOption("...", "0"), new { @class = "w3-input w3-border w3-padding-small" })
+    </p>
+    <p>
+        <label class="w3-label w3-left">Ghi chú:</label>
+        @Html.TextAreaFor(m => m.Comments, new { @class = "w3-input w3-border w3-round w3-padding-small", rows = "4" })
+    </p>
+</div>
+    <div class="w3-center w3-bottom w3-padding-bottom">
+        <button class="w3-btn w3-border w3-round w3-blue" type="submit"><i class="fa fa-floppy-o"></i> <b>Lưu thông tin</b></button>
+    </div>
+}
+<script type="text/javascript">
+    $(function () {
+        checkSupportForInputTypeDate();
+    });
+    function checkSupportForInputTypeDate() {
+        jQuery.validator.methods.date = function (value, element) {
+            var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+            var isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
+            if (isSafari || isChrome) {
+                var d = new Date();
+                return this.optional(element) || !/Invalid|NaN/.test(new Date(d.toLocaleDateString(value)));
+            } else {
+                return this.optional(element) || !/Invalid|NaN/.test(new Date(value));
+            }
+        };
+    }
+</script>
+@section menudieuhuong{
+    <div class="menudieuhuong">
+        <div class="menudieuhuong_conen">
+            <img src="@Url.Content("~/assets/images/muitendieuhuong.png")" />
+            <b>Thay đổi thông tin người dùng</b>
+        </div>
+    </div>
+}
+

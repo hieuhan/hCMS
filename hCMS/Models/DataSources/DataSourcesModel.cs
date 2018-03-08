@@ -17,13 +17,33 @@ namespace hCMS.Models.DataSources
 
         private List<DataTypes> _listDataTypes;
         private List<CMSLib.DataSources> _listDataSources;
+        private List<OrderByClauses> _listOrderByClauses;
+        private List<CMSLib.Users> _listUsers;
 
         public List<DataTypes> ListDataTypes
         {
-            get { return !_listDataTypes.HasValue() ? new DataTypes().GetList() : _listDataTypes; }
-            set { _listDataTypes = value; }
+            get => !_listDataTypes.HasValue() ? new DataTypes().GetList() : _listDataTypes;
+            set => _listDataTypes = value;
         }
+
+        public List<OrderByClauses> ListOrderByClauses
+        {
+            get => !_listOrderByClauses.HasValue() ? new OrderByClauses().GetList("DataSources") : _listOrderByClauses;
+            set => _listOrderByClauses = value;
+        }
+
+        public List<CMSLib.Users> ListUsers
+        {
+            get => !_listUsers.HasValue() ? new CMSLib.Users().GetAll() : _listUsers;
+            set => _listUsers = value;
+        }
+
+        public string DataSourceName { get; set; }
+        public string DateFrom { get; set; }
+        public string DateTo { get; set; }
+
         public int RowCount { get; set; }
         public byte DataTypeId { get; set; }
+        public string OrderBy { get; set; }
     }
 }

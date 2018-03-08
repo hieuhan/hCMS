@@ -155,7 +155,7 @@ namespace CMSLib
             {
                 SqlCommand cmd = new SqlCommand("DataSources_InsertOrUpdate");
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@Replicated", Replicated));
+                //cmd.Parameters.Add(new SqlParameter("@Replicated", Replicated));
                 cmd.Parameters.Add(new SqlParameter("@ActUserId", ActUserId));
                 cmd.Parameters.Add(new SqlParameter("@DataTypeId", this.DataTypeId));
                 cmd.Parameters.Add(new SqlParameter("@DataSourceName", this.DataSourceName));
@@ -183,7 +183,7 @@ namespace CMSLib
             {
                 SqlCommand cmd = new SqlCommand("DataSources_Delete");
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@Replicated", Replicated));
+                //cmd.Parameters.Add(new SqlParameter("@Replicated", Replicated));
                 cmd.Parameters.Add(new SqlParameter("@ActUserId", ActUserId));
                 cmd.Parameters.Add(new SqlParameter("@DataSourceId", this.DataSourceId));
                 cmd.Parameters.Add("@SysMessageId", SqlDbType.SmallInt).Direction = ParameterDirection.Output;

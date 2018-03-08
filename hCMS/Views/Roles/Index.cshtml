@@ -59,7 +59,7 @@
         </div>
         <div class="w3-padding-bottom w3-right">
             <a href="@(CmsConstants.ROOT_PATH)Roles/Edit" class="w3-btn w3-round w3-border w3-light-grey w3-hover-orange popup" title="Tạo mới"><i class="fa fa-plus"></i> Thêm mới</a>
-            <button class="w3-btn w3-round w3-light-grey w3-border w3-hover-orange" name="delete" value="delete"><i class="fa fa-trash"></i> Xóa</button>
+            <button class="w3-btn w3-round w3-light-grey w3-border w3-hover-orange" name="delete" value="delete" onclick="return confirm('Bạn muốn xóa dữ liệu này?');"><i class="fa fa-trash"></i> Xóa</button>
         </div>
     </div>
     <div>
@@ -89,7 +89,7 @@
                                 <a href="@(CmsConstants.ROOT_PATH)Roles/Edit?RoleId=@role.RoleId" class="fa fa-pencil-square-o w3-xlarge w3-text-blue w3-hover-text-orange popup" title="Sửa thông tin"></a>
                                 <a href="@(CmsConstants.ROOT_PATH)Roles/Delete?RoleId=@role.RoleId" class="fa fa-trash w3-xlarge w3-text-blue w3-hover-text-orange" onclick="return confirm('Xác nhận xóa dữ liệu ?')" title="Xóa dữ liệu"></a>
                             </td>
-                            <td class="w3-border w3-center chk-action"><input class="checkall w3-check" name="RolesId" type="checkbox" value="@role.RoleId"></td>
+                            <td class="w3-border w3-center chk-action"><input class="checkall w3-check" name="RoleIds" type="checkbox" value="@role.RoleId"></td>
                         </tr>
                     }
                 }
