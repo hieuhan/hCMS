@@ -48,6 +48,7 @@
     <Compile Include="Countries.cs" />
     <Compile Include="DataSources.cs" />
     <Compile Include="DataTypes.cs" />
+    <Compile Include="Districts.cs" />
     <Compile Include="Genders.cs" />
     <Compile Include="MediaGroups.cs" />
     <Compile Include="Medias.cs" />

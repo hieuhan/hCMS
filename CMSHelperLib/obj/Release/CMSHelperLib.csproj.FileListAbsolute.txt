@@ -6,3 +6,11 @@ D:\hieuhan\hCMS\CMSHelperLib\obj\Release\CMSHelperLib.pdb
 D:\hieuhan\hCMS\CMSHelperLib\bin\Release\LibUtils.dll
 D:\hieuhan\hCMS\CMSHelperLib\bin\Release\LibUtils.pdb
 D:\hieuhan\hCMS\CMSHelperLib\obj\Release\CMSHelperLib.csprojResolveAssemblyReference.cache
+E:\GitHub\hCMS\CMSHelperLib\bin\Release\CMSHelperLib.dll
+E:\GitHub\hCMS\CMSHelperLib\bin\Release\CMSHelperLib.pdb
+E:\GitHub\hCMS\CMSHelperLib\bin\Release\LibUtils.dll
+E:\GitHub\hCMS\CMSHelperLib\bin\Release\LibUtils.pdb
+E:\GitHub\hCMS\CMSHelperLib\obj\Release\CMSHelperLib.csprojResolveAssemblyReference.cache
+E:\GitHub\hCMS\CMSHelperLib\obj\Release\CMSHelperLib.csproj.CoreCompileInputs.cache
+E:\GitHub\hCMS\CMSHelperLib\obj\Release\CMSHelperLib.dll
+E:\GitHub\hCMS\CMSHelperLib\obj\Release\CMSHelperLib.pdb

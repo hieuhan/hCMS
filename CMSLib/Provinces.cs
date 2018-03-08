@@ -176,7 +176,7 @@ namespace CMSLib
             {
                 SqlCommand cmd = new SqlCommand("Provinces_InsertOrUpdate");
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@Replicated", replicated));
+                //cmd.Parameters.Add(new SqlParameter("@Replicated", replicated));
                 cmd.Parameters.Add(new SqlParameter("@ActUserId", actUserId));
                 cmd.Parameters.Add(new SqlParameter("@ProvinceName", this.ProvinceName));
                 cmd.Parameters.Add(new SqlParameter("@ProvinceDesc", this.ProvinceDesc));
@@ -204,7 +204,7 @@ namespace CMSLib
             {
                 SqlCommand cmd = new SqlCommand("Provinces_Delete");
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(new SqlParameter("@Replicated", replicated));
+                //cmd.Parameters.Add(new SqlParameter("@Replicated", replicated));
                 cmd.Parameters.Add(new SqlParameter("@ActUserId", actUserId));
                 cmd.Parameters.Add(new SqlParameter("@ProvinceId", this.ProvinceId));
                 cmd.Parameters.Add("@SysMessageId", SqlDbType.SmallInt).Direction = ParameterDirection.Output;

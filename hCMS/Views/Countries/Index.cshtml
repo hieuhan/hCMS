@@ -59,7 +59,8 @@
             <label class="w3-label">Từ khóa:</label>
         </div>
         <div class="w3-col s3">
-            <input type="text" id="Keyword" name="Keyword" value="" class="w3-input w3-round w3-border w3-padding-small">    </div>
+            @Html.TextBoxFor(m => m.CountryName, new { @class = "w3-input w3-round w3-border w3-padding-small" })
+        </div>
         <div class="w3-col s1 w3-padding-left">
             <button class="w3-btn w3-round w3-light-grey w3-border" type="submit"><i class="fa fa-search"></i> Tìm kiếm</button>
         </div>

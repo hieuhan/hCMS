@@ -1,0 +1,120 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using CMSLib
+@using hCMS.Library
+@model hCMS.Models.Districts.DistrictsModel
+@using (Html.BeginForm())
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('a.popup').on('click', function (e) {
+                var page = $(this).attr("href")
+                var cdialog = $('<div id="divEdit" style="overflow:hidden;"></div>')
+                    .html('<iframe id="ifEdit" style="border: 0px;" src="' + page + '" width="100%" height="100%"></iframe>')
+                    .dialog({
+                        autoOpen: false,
+                        modal: true,
+                        height: 500,
+                        width: 650,
+                        title: $(this).attr("title"),
+                        closeText: 'Đóng',
+                        close: function (event, ui) {
+                            $(this).remove();
+                            window.location = cms.virtualPath('/Districts/Index');
+                        }
+                    });
+                cdialog.dialog('open');
+                e.preventDefault();
+            });
+        });
+    </script>
+
+    <div class="w3-row w3-padding-bottom">
+
+        <div class="w3-col s1 w3-padding-top ">
+            <label class="w3-label"> Quốc gia:</label>
+        </div>
+        <div class="w3-col s3">
+            @Html.DropDownListFor(m => m.CountryId, new SelectList(Model.ListCountries, "CountryId", "CountryDesc", Model.CountryId).AddDefaultOption("...", "0"), new { @class = "w3-input w3-border w3-padding-small", onchange = "this.form.submit()" })
+        </div>
+        <div class="w3-col s1 w3-padding-top w3-padding-left">
+            <label class="w3-label">Từ khóa:</label>
+        </div>
+        <div class="w3-col s3">
+            @Html.TextBoxFor(m => m.DistrictName, new { @class = "w3-input w3-border w3-round w3-padding-small" })
+        </div>
+    </div>
+    <div class="w3-row w3-padding-bottom">
+        <div class="w3-col s1 w3-padding-top">
+            <label class="w3-label">Tỉnh thành:</label>
+        </div>
+        <div class="w3-col s3">
+            @Html.DropDownListFor(m => m.ProvinceId, new SelectList(Model.ListProvinces, "ProvinceId", "ProvinceDesc", Model.ProvinceId).AddDefaultOption("...", "0"), new { @class = "w3-input w3-border w3-padding-small", onchange = "this.form.submit()" })
+        </div>
+        <div class="w3-col s1 w3-padding-top">
+            <label class="w3-label"></label>
+        </div>
+        <div class="w3-col s1 ">
+            <button class="w3-btn w3-round w3-light-grey w3-border" type="submit"><i class="fa fa-search"></i> Tìm kiếm</button>
+        </div>
+    </div>
+    <hr style="margin: 5px 0 5px">
+}
+@using (Html.BeginForm("MultipleAction", "Districts", FormMethod.Post, null))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(false, "", new { @class = "text-danger w3-center" })
+    <div>
+        <div class="w3-padding-top w3-left">
+            <b>Tổng cộng: @Model.RowCount</b>
+        </div>
+        <div class="w3-padding-bottom w3-right">
+            <a href="@(CmsConstants.ROOT_PATH)Districts/Edit" class="w3-btn w3-round w3-border w3-light-grey w3-hover-orange popup" title="Tạo mới"><i class="fa fa-plus"></i> Thêm mới</a>
+            <button class="w3-btn w3-round w3-light-grey w3-border w3-hover-orange" name="delete" value="delete" type="submit">
+                <i class="fa fa-trash"></i> Xóa
+            </button>
+        </div>
+    </div>
+    <div>
+        <table class="w3-table w3-bordered w3-striped w3-border">
+            <thead class="w3-blue">
+                <tr>
+                    <th class="w3-border w3-center">#</th>
+                    <th class="w3-border">Tên</th>
+                    <th class="w3-border">Mô tả</th>
+                    <th class="w3-border w3-center">Quốc gia</th>
+                    <th class="w3-border w3-center">Tỉnh thành</th>
+                    <th class="w3-border w3-center">Thứ tự</th>
+                    <th class="w3-border w3-center">Thao tác</th>
+                    <th class="w3-border w3-center"><input id="selectall" type="checkbox" class="w3-check"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.ListDistricts.HasValue())
+                {
+                    for (int i = 0; i < Model.ListDistricts.Count; i++)
+                    {
+                        var district = Model.ListDistricts[i];
+                        int number = i + (Model.Pagination.PageIndex > 0 ? Model.Pagination.PageIndex - 1 : Model.Pagination.PageIndex) * Model.Pagination.PageSize + 1;
+                        <tr>
+                            <td class="w3-border w3-center">@number</td>
+                            <td class="w3-border">@district.DistrictName</td>
+                            <td class="w3-border">@district.DistrictDesc</td>
+                            <td class="w3-border w3-center">@Countries.Static_Get(district.CountryId, Model.ListCountries).CountryDesc</td>
+                            <td class="w3-border w3-center">@Provinces.Static_Get(district.ProvinceId, Model.ListProvinces).ProvinceDesc</td>
+                            <td class="w3-border w3-center">@district.DisplayOrder</td>
+                            <td class="w3-border w3-center"><a href="@(CmsConstants.ROOT_PATH)Districts/Edit?districtId=@district.DistrictId" class="fa fa-pencil-square-o w3-xlarge w3-text-blue w3-hover-text-orange popup" title="Sửa thông tin"></a> <a href="@(CmsConstants.ROOT_PATH)Districts/Delete?districtId=@district.DistrictId" class="fa fa-trash w3-xlarge w3-text-blue w3-hover-text-orange" onclick="return confirm('Bạn muốn xóa dữ liệu này?');" title="Xóa dữ liệu"></a> </td>
+                            <td class="w3-border w3-center"><input class="checkall w3-check" type="checkbox" name="DistrictIds" value="@district.DistrictId"></td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+    {
+        Html.RenderAction("PartialPagination", "Shared", new { model = Model.Pagination });
+    }
+}
+
+

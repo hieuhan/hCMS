@@ -152,6 +152,7 @@
     <Compile Include="Controllers\AjaxController.cs" />
     <Compile Include="Controllers\CountriesController.cs" />
     <Compile Include="Controllers\DataSourcesController.cs" />
+    <Compile Include="Controllers\DistrictsController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MediaGroupsController.cs" />
@@ -173,12 +174,17 @@
     <Compile Include="Models\DataSources\DataSourceMultipleActionModel.cs" />
     <Compile Include="Models\DataSources\DataSourcesEditModel.cs" />
     <Compile Include="Models\DataSources\DataSourcesModel.cs" />
+    <Compile Include="Models\Districts\DistrictEditModel.cs" />
+    <Compile Include="Models\Districts\DistrictsModel.cs" />
+    <Compile Include="Models\Districts\DistrictsMultipleActionModel.cs" />
     <Compile Include="Models\MediaGroups\MediaGroupMultipleActionModel.cs" />
     <Compile Include="Models\MediaGroups\MediaGroupsEditModel.cs" />
     <Compile Include="Models\MediaGroups\MediaGroupsModel.cs" />
     <Compile Include="Models\MediasModel.cs" />
     <Compile Include="Models\PaginationModel.cs" />
+    <Compile Include="Models\Provinces\ProvinceEditModel.cs" />
     <Compile Include="Models\Provinces\ProvincesModel.cs" />
+    <Compile Include="Models\Provinces\ProvincesMultipleActionModel.cs" />
     <Compile Include="Models\Roles\RoleActionsModel.cs" />
     <Compile Include="Models\Roles\RolesModel.cs" />
     <Compile Include="Models\Roles\RolesMultipleActionModel.cs" />
@@ -915,6 +921,9 @@
     <Content Include="Views\Medias\Edit.cshtml" />
     <Content Include="Views\Medias\Select.cshtml" />
     <Content Include="Views\Provinces\Index.cshtml" />
+    <Content Include="Views\Provinces\Edit.cshtml" />
+    <Content Include="Views\Districts\Index.cshtml" />
+    <Content Include="Views\Districts\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

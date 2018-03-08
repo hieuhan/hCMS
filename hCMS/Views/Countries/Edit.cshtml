@@ -32,7 +32,7 @@
             <label class="w3-label">Ảnh:</label>
         </div>
         <div class="w3-col s10 w3-padding-top">
-            <img alt="Chọn ảnh" src="@(string.Concat(!Model.ImagePath.StartsWith("http://") ? Constants.ROOT_PATH : Constants.WEBSITE_MEDIADOMAIN, Model.ImagePath))" onclick="SelectName()" Id="SelectImage" style="width: 60px; height: 40px; cursor: pointer;" />
+            <img alt="Chọn ảnh" src="@(!string.IsNullOrEmpty(Model.ImagePath) ? string.Concat(!Model.ImagePath.StartsWith("http://") ? Constants.ROOT_PATH : Constants.WEBSITE_MEDIADOMAIN, Model.ImagePath) : Url.Content("~/assets/images/them_moi.png"))" onclick="SelectName()" Id="SelectImage" style="width: 60px; height: 40px; cursor: pointer;" />
             <input type="checkbox" id="Display" name="Display" class="w3-check" /> <label class="w3-label1">Xóa ảnh</label>
         </div>
         <label class="w3-label w3-left">Thứ tự:</label>
@@ -45,23 +45,11 @@
         </div>
     }
         <script type="text/javascript">
-            //Thêm mới hoặc cập nhật key query string url
-            function updateQueryStringParameter(uri, key, value) {
-                var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
-                var separator = uri.indexOf('?') !== -1 ? "&" : "?";
-                if (uri.match(re)) {
-                    return uri.replace(re, '$1' + key + "=" + value + '$2');
-                }
-                else {
-                    return uri + separator + key + "=" + value;
-                }
-            }
             function SelectName() {
                 var popup = window.open("/medias/select", "Popup", "width=850,height=550,scrollbars=1");
                 popup.focus();
                 return false;
             }
-
         </script>
 </body>
 </html>

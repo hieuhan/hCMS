@@ -36,12 +36,12 @@ namespace hCMS.Controllers
         }
 
         [HttpGet]
-        public ActionResult Edit(short countryId=0)
+        public ActionResult Edit(short countryId = 0)
         {
             var model = new CountriesEditModel();
             if (countryId > 0)
             {
-                var country = new Countries{ CountryId = countryId }.Get();
+                var country = new Countries { CountryId = countryId }.Get();
                 if (country.CountryId > 0)
                 {
                     model.CountryId = country.CountryId;

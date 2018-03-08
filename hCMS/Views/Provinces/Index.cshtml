@@ -49,7 +49,8 @@
     </div>
     <hr style="margin: 5px 0 5px">
 }
-<form action="/provinces/change_multi" method="post">
+@using (Html.BeginForm("MultipleAction", "Provinces", FormMethod.Post, null))
+{
     <div>
         <div class="w3-padding-top w3-left">
             <b>Tổng cộng: 63</b>
@@ -94,8 +95,8 @@
             </tbody>
         </table>
     </div>
-    @{ Html.RenderAction("PartialPagination", "Shared", new {model = Model.Pagination}); }
-</form>
+    { Html.RenderAction("PartialPagination", "Shared", new {model = Model.Pagination}); }
+}
 @section menudieuhuong{
     <div class="menudieuhuong">
         <div class="menudieuhuong_conen">
